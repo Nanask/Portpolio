@@ -1,10 +1,7 @@
-const light = {
+export const light = {
   backgroundColor: "while",
 };
 
-const dark = {
+export const dark = {
   backgroundColor: "#fff",
 };
-
-export const light = { light };
-export const light = { dark };
