@@ -7,12 +7,14 @@ import ModeProvider from "./provider/ModeProvider";
 
 function App() {
   return (
-    <ModeProvider>
-      <Headers />
-      <Intro />
-      <Project />
-      <Skill />
-    </ModeProvider>
+    <div>
+      <ModeProvider>
+        <Headers />
+        <Intro />
+        <Project />
+        <Skill />
+      </ModeProvider>
+    </div>
   );
 }
 

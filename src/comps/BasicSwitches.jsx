@@ -5,8 +5,9 @@ import FormControlLabel from "@mui/material/FormControlLabel";
 import Switch from "@mui/material/Switch";
 import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
+import { useThemecontext } from "../provider/ModeProvider";
 
-const label = { inputProps: { "aria-label": "Switch demo" } };
+// const label = { inputProps: { "aria-label": "Switch demo" } };
 
 const MaterialUISwitch = styled(Switch)(({ theme }) => ({
   width: 62,
@@ -56,9 +57,10 @@ const MaterialUISwitch = styled(Switch)(({ theme }) => ({
 }));
 
 export default function BasicSwitches() {
+  const { toggleTheme, themeObject } = useThemecontext();
   return (
     <FormGroup>
-      <FormControlLabel control={<MaterialUISwitch sx={{ m: 1 }} defaultChecked />} label="switch" />
+      <FormControlLabel control={<MaterialUISwitch sx={{ m: 1 }} defaultChecked />} onChange={toggleTheme} Mode={themeObject} label="switch" />
     </FormGroup>
   );
 }
