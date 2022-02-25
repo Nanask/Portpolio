@@ -1,10 +1,10 @@
 export const dark = {
-  backgroundColor: "#282c34",
+  bgColor: "#282c34",
   color: "white",
 };
 
 export const light = {
-  backgroundColor: "white",
+  bgColor: "white",
   color: "#282c34",
 };
 
