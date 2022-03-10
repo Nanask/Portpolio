@@ -31,13 +31,15 @@ const ModeProvider = ({ children }) => {
     }
   }, [theme]);
 
-  console.log("toggleTheme", theme);
-  console.log(themeObject);
+  // console.log("toggleTheme", theme);
+  // console.log(themeObject);
+
 
   const propsStore = {
     toggleTheme,
     themeObject,
   };
+
 
   return (
     <ThemeContext.Provider value={propsStore}>
