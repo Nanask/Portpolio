@@ -10,11 +10,11 @@ import { Spring } from "./../icon/Spring";
 
 function Skill() {
   return (
-    <section>
+    <section className="mb-30">
       <div className="my-14 text-center">
         <h1 className="text-2xl font-bold">SKILLS</h1>
       </div>
-      <div className="mb-30">
+      <div className="mb-7">
         <ul className="flex justify-center w-50 space-x-20 bg-slate-600">
           <div className="bg-gray-100 flex justify-center flex-col px-10 py-5">
             <div className="m-auto px-4">

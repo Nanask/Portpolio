@@ -1,4 +1,3 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import "../css/headers.css";
 import { useThemecontext } from "../provider/ModeProvider";
@@ -11,8 +10,8 @@ function Headers() {
   return (
     <section>
       <div class="App-header">
-        <header className="flex items-center w-3/4 h-3/4 bg-gray-400 ">
-          <div className="justify-center">
+        <header className="flex items-center w-3/4 h-3/4  ">
+          <div className="flex-1">
             <img src={dog} width="400" height="400" />
           </div>
           <div className="flex-1 text-left ml-48">
