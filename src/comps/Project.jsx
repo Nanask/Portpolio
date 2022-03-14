@@ -1,38 +1,39 @@
-import React, { useCallback, useState } from "react";
+import "aos/dist/aos.css";
+import React from "react";
 import "../css/project.css";
-import dog from "../img/dog.png";
-import { useThemecontext } from "./../provider/ModeProvider";
-import { Modal } from "./Modal";
-import { useModalContext } from "./../provider/ModalProvider";
+import { modalStore } from "./Modal";
+
+// alt + shift + o  import 지우는것 대박;
 
 function Project() {
-  const { switchModal } = useModalContext();
+  const { flagModal, handleModal } = modalStore();
+
   return (
-    <section className="bg-black">
-      <div className="my-14 text-center ">
-        <h1 className=" text-white text-center text-2xl font-bold">PROJECTS</h1>
+    <section className="bg-bg-basic">
+      <div className="text-center p-8" data-aos="fade-up">
+        <div className=" text-white text-center text-2xl font-bold">PROJECTS</div>
       </div>
-      <div>
-        <ul className="flex justify-center">
-          <li className="mx-10">
-            <div className=" text-center hover: cursor-pointer">
-              <img onClick={switchModal} class="img_1" src={dog} width="300px" height="300px" />
+      <div className="pb-24">
+        <div className="flex justify-center" data-aos="fade-right" data-aos-easing="linear">
+          <div className="space-x-9 mx-24">
+            <div className="text-center hover: cursor-pointer bg-white inline-block px-3 pt-3 hover:shadow-3xl delay-100">
+              <img onClick={handleModal} class="img_1" src={require("../img/dog.png").default} width="300px" height="300px" />
               <p className="my-3 text-white">귀여운 댕댕이</p>
             </div>
-          </li>
-          <li className="mx-10">
-            <div className="text-center hover: cursor-pointer">
-              <img onClick={switchModal} src={dog} width="300px" height="300px" />
+          </div>
+          <div className="space-x-9 mx-24">
+            <div className="text-center hover: cursor-pointer bg-white inline-block px-3 pt-3 hover:shadow-3xl delay-100">
+              <img onClick={handleModal} src={require("../img/dog.png").default} width="300px" height="300px" />
               <p className="my-3 text-white">귀여운 댕댕이</p>
             </div>
-          </li>
-          <li className="mx-10">
-            <div className="text-center hover: cursor-pointer">
-              <img onClick={switchModal} src={dog} width="300px" height="300px" />
+          </div>
+          <div className="space-x-9 mx-24">
+            <div className="text-center hover: cursor-pointer bg-white inline-block px-3 pt-3 hover:shadow-3xl delay-100">
+              <img onClick={handleModal} src={require("../img/dog.png").default} width="300px" height="300px" />
               <p className="my-3 text-white">귀여운 댕댕이</p>
             </div>
-          </li>
-        </ul>
+          </div>
+        </div>
       </div>
     </section>
   );

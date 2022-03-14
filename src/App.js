@@ -6,14 +6,19 @@ import Skill from "./comps/Skill";
 import ModeProvider from "./provider/ModeProvider";
 import { Globalstyle } from "./theme/GlobalStyle";
 import { Modal } from "./comps/Modal";
-import ModalContext from "./provider/ModalProvider";
 import { Footer } from "./comps/Footer";
+import { BrowserRouter } from "react-router-dom";
+import AOS from "aos";
+import { useEffect } from "react";
 
 function App() {
+  useEffect(() => {
+    AOS.init();
+  });
   return (
     <div>
-      <ModeProvider>
-        <ModalContext>
+      <BrowserRouter>
+        <ModeProvider>
           <Modal />
           {/* <Globalstyle /> */}
           <Headers />
@@ -21,8 +26,8 @@ function App() {
           <Project />
           <Skill />
           <Footer />
-        </ModalContext>
-      </ModeProvider>
+        </ModeProvider>
+      </BrowserRouter>
     </div>
   );
 }
