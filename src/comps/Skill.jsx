@@ -11,11 +11,11 @@ import { Spring } from "./../icon/Spring";
 
 function Skill() {
   return (
-    <section className="mb-30" data-aos="fade-right">
+    <section className="mb-30 font-regular" data-aos="fade-up">
       <div className="my-14 text-center">
         <h1 className="text-2xl font-bold">SKILLS</h1>
       </div>
-      <div className="mb-7">
+      <div className="mb-7" data-aos="fade-up" data-aos-easing="linear">
         <ul className="flex justify-center w-50 space-x-20 ">
           <div className="bg-icon flex justify-center flex-col pt-3 pl-3 pb-2 pr-3 rounded-md">
             <div className="m-auto px-4 ">
@@ -50,7 +50,7 @@ function Skill() {
           <div className="bg-icon flex justify-center flex-col pt-3 pl-3 pb-2 pr-3 rounded-md">
             <div>
               <div className="m-auto px-4 ">
-                <Spring className="m-auto" />
+                <Spring />
               </div>
               <p className="mt-3 text-center text-sm font-bold ">Spring</p>
             </div>
@@ -58,7 +58,7 @@ function Skill() {
           <div className="bg-icon flex justify-center flex-col pt-3 pl-3 pb-2 pr-3 rounded-md">
             <div>
               <div className="m-auto px-4 ">
-                <Js className="m-auto" />
+                <Js />
               </div>
               <p className="mt-3 text-center text-sm font-bold ">JavaScript</p>
             </div>

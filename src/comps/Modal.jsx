@@ -30,7 +30,7 @@ export const Modal = () => {
       {flagModal ? (
         <div className="w-full h-screen z-50 fixed flex justify-center items-center left-0 top-0 bg-opacity-70 bg-black overflow-hidden ">
           <div className="bg-white rounded md:w-1/2 h-4/6 border-2">
-            <div className="hover: cursor-pointer" onClick={handleModal}>
+            <div className="hover: cursor-pointer ml-auto p-10" onClick={handleModal}>
               <X_Icon />
             </div>
             <div className="mt-10">

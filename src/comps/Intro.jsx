@@ -8,12 +8,12 @@ import { Velog } from "../icon/Velog";
 
 function Intro() {
   return (
-    <section data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
+    <section data-aos="fade-up">
       <div className="my-14 text-center font-black">
         <h1 className="text-2xl font-bold ">ABOUT ME</h1>
       </div>
-      <div className="flex justify-center flex-row space-x-16 text-center mb-10  ">
-        <div className="flex ">
+      <div className="flex justify-center flex-row space-x-16 text-center mb-10 ">
+        <div className="flex " data-aos="fade-up" data-aos-easing="linear">
           <div>
             <div className="flex justify-center  px-10 py-5">
               <Human />
