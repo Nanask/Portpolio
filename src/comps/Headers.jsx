@@ -26,9 +26,7 @@ function Headers() {
     <section className="bg-[#e9d5a1] font-black">
       <div class="App-header">
         <header className="">
-          <div className="text-5xl">
-            <TypingStep sequence={sequence} element="h1" typeSpeed="150" cursorColor="white" blinkingSpeed="600" />
-          </div>
+          <div className="text-5xl">{/* <TypingStep sequence={sequence} element="h1" typeSpeed="150" cursorColor="white" blinkingSpeed="600" /> */}</div>
         </header>
         <div className="pt-24">
           <div className="p-10 align-bottom">

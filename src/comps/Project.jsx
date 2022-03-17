@@ -9,7 +9,7 @@ function Project() {
   const { flagModal, handleModal } = modalStore();
 
   return (
-    <section className="bg-bg-basic">
+    <section className="bg-bg-basic ">
       <div className="text-center p-8" data-aos="fade-up">
         <div className=" text-white text-center text-2xl font-bold">PROJECTS</div>
       </div>
