@@ -56,5 +56,6 @@ const MaterialUISwitch = styled(Switch)(({ theme }) => ({
 
 export default function BasicSwitches() {
   const { toggleTheme, themeObject } = useThemecontext();
+
   return <MaterialUISwitch onClick={toggleTheme} mode={themeObject}></MaterialUISwitch>;
 }

@@ -10,26 +10,17 @@ export const useThemecontext = () => {
 
 const ModeProvider = ({ children }) => {
   const [theme, setTheme] = useState("light");
-  const themeObject = theme === "light" ? light : dark;
-
-  // const styleDark = {
-  //   backgroundColor: "#282c34",
-  //   textColor: "white",
-  // };
-
-  // const styleLight = {
-  //   backgroundColor: "white",
-  //   textColor: "#282c34",
-  // };
+  const themeObject = theme === "light" ? dark : light;
 
   const toggleTheme = useCallback(() => {
     if (theme === "light") {
-      // styleDark();
       setTheme("dark");
     } else {
       setTheme("light");
     }
   }, [theme]);
+
+  // theme === "light" ? setTheme("dark") : setTheme("light");
 
   // console.log("toggleTheme", theme);
   // console.log(themeObject);

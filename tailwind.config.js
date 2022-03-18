@@ -10,9 +10,17 @@ module.exports = {
     },
     extend: {
       keyframes: {
+        slider: {
+          "0%": {
+            transform: "translateX(0px)",
+          },
+          "100%": {
+            transform: "translateX(100px)",
+          },
+        },
         shadowBox: {
           "0%": [
-            { transform: "translateZ(0)" },
+            { transform: "translateZ(0px)" },
             {
               boxShadow: " 0 0 0 0 rgba(0, 0, 0, 0)",
             },
@@ -27,6 +35,7 @@ module.exports = {
       },
       animation: {
         shadowBox: "shadowbox 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both",
+        slider: "slider",
       },
       colors: {
         "bg-basic": "#e9d5a1",

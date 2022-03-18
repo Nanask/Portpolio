@@ -15,19 +15,18 @@ function App() {
   useEffect(() => {
     AOS.init();
   });
+
   return (
     <div>
-      <BrowserRouter>
-        <ModeProvider>
-          <Modal />
-          {/* <Globalstyle /> */}
-          <Headers />
-          <Intro />
-          <Project />
-          <Skill />
-          <Footer />
-        </ModeProvider>
-      </BrowserRouter>
+      <ModeProvider>
+        <Modal />
+        {/* <Globalstyle /> */}
+        <Headers />
+        <Intro />
+        <Project />
+        <Skill />
+        <Footer />
+      </ModeProvider>
     </div>
   );
 }

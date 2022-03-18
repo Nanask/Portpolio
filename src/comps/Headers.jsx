@@ -30,7 +30,7 @@ function Headers() {
         </header>
         <div className="pt-24">
           <div className="p-10 align-bottom">
-            <BasicSwitches styled={themeObject} />
+            <BasicSwitches />
           </div>
         </div>
       </div>
