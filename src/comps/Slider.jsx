@@ -8,57 +8,59 @@ import { faAngleRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export const Slider = () => {
-  const [images, setImages] = useState(0);
-  const sliderRef = useRef();
+  const [imageIndex, setImageIndex] = useState(0);
   const [style, setStyle] = useState({
-    transform: `translateX(-${images}00%)`,
+    transform: `translateX(-${imageIndex}00%)`,
     transition: `all 0.4s ease-in-out`,
   });
 
   const imgSlider = [
-    {
-      img: cat1,
-    },
     {
       img: cat2,
     },
     {
       img: cat3,
     },
+    {
+      img: cat1,
+    },
   ];
 
   const onRightClick = () => {
-    if (images !== imgSlider.length) {
-      setImages(images + 1);
+    const lastImg = imgSlider.length - 1;
+
+    console.log("마지막 이미지 번호", lastImg);
+
+    // index값이 이미지 개수랑 일치하지 않는다면
+    if (imageIndex !== imgSlider.length) {
+      setImageIndex(imageIndex + 1);
       setStyle({
-        transform: `translateX(-${images + 1}00%)`,
+        transform: `translateX(${imageIndex + 1}00%)`,
         transition: `all 0.4s ease-in-out`,
       });
-      console.log("Rightstyle", style);
-      console.log("Rightimages1", images);
-    } else if (images == imgSlider.length) {
-      setImages(1);
-      console.log("Rightimages2", images);
+      console.log("Rightimages1", imageIndex);
+      //index값이 이미지 개수와 일치하면
+    } else if (imageIndex === imgSlider.length) {
+      setImageIndex(0);
     }
-
-    // console.log("Rightimages", images);
     alert("right");
   };
 
   const onLeftClick = () => {
-    // const listImg = imgSlider[length - 1];
-    if (images !== 1) {
-      setImages(images - 1);
+    const lastImg = imgSlider.length - 1;
+    console.log("마지막 이미지 번호", lastImg);
+    if (imageIndex !== 0) {
+      setImageIndex(imageIndex - 1);
       setStyle({
-        transform: `translateX(-${images - 1}00%)`,
+        transform: `translateX(-${imageIndex - 1}00%)`,
         transition: `all 0.4s ease-in-out`,
       });
-      console.log("LeftImages1", images);
-    } else if (images === 1) {
-      setImages(imgSlider.length);
-      console.log("LeftImages2", images);
+      console.log("LeftImages1", imageIndex);
+    } else if (imageIndex === 0) {
+      setImageIndex(lastImg);
+      console.log("LeftImages2", imageIndex);
     }
-    console.log("LeftImages", images);
+    console.log("LeftImages", imageIndex);
 
     alert("left");
   };
@@ -74,10 +76,10 @@ export const Slider = () => {
       <div className="self-center pr-10 z-50 hover: cursor-pointer" onClick={onLeftClick}>
         <FontAwesomeIcon icon={faAngleLeft} size="3x" />
       </div>
-      <div className="pt-10 flex justify-center overflow-hidden  " style={style}>
+      <div className="pt-10 flex justify-center overflow-hidden  ">
         {imgSlider.map((item, index) => {
           // console.log(index);
-          return <img src={cat1} width="500px" height="300px" key={index} />;
+          return <img src={item.img} width="500px" height="300px" key={index} />;
         })}
       </div>
       {/* <div className="pt-10 flex justify-center" style={style}>
