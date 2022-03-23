@@ -69,16 +69,18 @@ export const Slider = () => {
         transform: `translateX(-${imageIndex + 1}00%)`,
         transition: `all 0.4s ease-in-out`,
       });
-      console.log("index 값이 0일때 style", style);
       console.log("Rightimages1", imageIndex);
       //index값이 이미지 개수와 일치하면
     }
+    // else {
+    //   console.log("여기는 현재 index와 이미지개수가 같을때");
+    // }
     if (imageIndex >= lastImg) {
       console.log("이미지 같을때 index", imageIndex);
       setImageIndex(0);
       setStyle({
-        transform: `translateX(-${0}00%)`,
-        transition: `0ms `,
+        transform: `translateX(0)`,
+        transition: `all 0.4s ease-in-out`,
       });
       // setTimeout(() => {
       //   setStyle({
@@ -104,15 +106,23 @@ export const Slider = () => {
       });
     }
     if (imageIndex === 0) {
+      if (length - 1 === lastImg) {
+        setStyle({
+          transform: `translateX(-${length - 1}00%)`,
+          transition: "all 0.4s ease-in-out",
+        });
+      }
       // alert("여기는 0일때");
-      setImageIndex(length - 1);
+      setImageIndex(lastImg);
+      // console.log("마지막이미지", lastImg);
+      // console.log("length-1", length - 1);
       // alert("imageIndex", imageIndex);
-      setStyle({
-        transform: `translateX(-${lastImg}00%)`,
-        transition: `0ms`,
-      });
-      console.log("index 값이 0일때 style", style);
-      console.log("index 값이 0일때", imageIndex);
+      // setStyle({
+      //   transform: `translateX(-${length - 1}00%)`,
+      //   transition: `0ms`,
+      // });
+      // console.log("index 값이 0일때 style", style);
+      // console.log("index 값이 0일때", imageIndex);
     }
 
     // alert("left");
@@ -126,17 +136,13 @@ export const Slider = () => {
   //   console.log("imgslider", imgSlider);
   return (
     // <div className="w-4/5 h-auto">
-    <div className="pt-10 flex justify-between items-center whitespace-nowrap">
-      <div className="pr-10 ml-2 z-50 hover: cursor-pointer" onClick={onLeftClick}>
+    <div className="pt-10 px-10 flex justify-between items-center whitespace-nowrap">
+      <div className=" z-50 hover: cursor-pointer" onClick={onLeftClick}>
         <FontAwesomeIcon icon={faAngleLeft} size="3x" />
       </div>
       {/* <div className=" w-full "> */}
-      <div className=" w-full h-96 relative overflow-hidden max-w-xl ">
-        <div className="pt-10 flex absolute object-cover text-center max-h-full" style={style}>
-          {/* <img src={cat1} width="1000px" height="300px" />
-            <img src={cat2} width="500px" height="300px" />
-            <img src={cat3} width="500px" height="300px" />
-          </div> */}
+      <div className=" w-full h-96 relative overflow-hidden">
+        <div className="pt-10 flex absolute object-cover max-h-full" style={style}>
           {imgSlider.map((item, index) => {
             // console.log(index);
             // return (
@@ -144,12 +150,12 @@ export const Slider = () => {
             //     <p className="bg-gradient-to-t"></p>
             //   </div>
             // );
-            return <img src={item.img} key={item.id} width="100%" height="100%" />;
+            return <img src={item.img} key={item.id} />;
           })}
         </div>
         {/* </div> */}
       </div>
-      <div className="self-center mr-2 pl-10 z-50 hover: cursor-pointer" onClick={onRightClick}>
+      <div className="z-50 hover: cursor-pointer" onClick={onRightClick}>
         <FontAwesomeIcon icon={faAngleRight} size="3x" />
       </div>
       {/* <div className="pt-10 flex justify-center" style={style}>
