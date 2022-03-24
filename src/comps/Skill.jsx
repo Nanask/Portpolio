@@ -11,57 +11,53 @@ import { Spring } from "./../icon/Spring";
 
 function Skill() {
   return (
-    <section className="mb-30 font-regular" data-aos="fade-up">
-      <div className="my-14 text-center">
-        <h1 className="text-2xl font-bold">SKILLS</h1>
+    <section className="pt-30 font-regular" data-aos="fade-up">
+      <div className="py-7 text-center">
+        <h1 className="text-3xl font-bold">SKILLS</h1>
       </div>
-      <div className="mb-7" data-aos="fade-up" data-aos-easing="linear">
-        <ul className="flex justify-center w-50 space-x-20 ">
-          <div className="bg-icon flex justify-center flex-col pt-3 pl-3 pb-2 pr-3 rounded-md">
+      <div className="py-7" data-aos="fade-up" data-aos-easing="linear">
+        <ul className="flex justify-center w-50 space-x-20">
+          <div className="flex justify-center flex-col rounded-md">
             <div className="m-auto px-4 ">
               <Css3 />
             </div>
-            <p className="mt-3 text-center text-sm font-bold  ">CSS 3</p>
+            <p className="py-3 text-center text-lg font-bold">CSS 3</p>
           </div>
-          <div className="bg-icon flex justify-center flex-col pt-3 pl-3 pb-2 pr-3 rounded-md overflow-hidden">
-            <div className="m-auto px-4 ">
+          <div className=" flex justify-center flex-col rounded-md">
+            <div className="m-auto px-4">
               <Html />
             </div>
-            <p className="mt-3 text-center text-sm font-bold ">HTML 5</p>
+            <p className="py-3 text-center text-lg font-bold ">HTML 5</p>
           </div>
-          <div className="bg-icon flex justify-center flex-col pt-3 pl-3 pb-2 pr-3 rounded-md">
+          <div className=" flex justify-center flex-col rounded-md">
             <div className="m-auto px-4 ">
               <ReactIcon />
             </div>
-            <p className="mt-3 text-center text-sm font-bold ">React</p>
+            <p className="py-3 text-center text-lg font-bold ">React</p>
           </div>
-          <div className="bg-icon flex justify-center flex-col pt-3 pl-3 pb-2 pr-3 rounded-md">
+          <div className=" flex justify-center flex-col rounded-md">
             <div className="m-auto px-4 ">
               <Mysql />
             </div>
-            <p className="mt-3 text-center text-sm font-bold ">MySql</p>
+            <p className="py-3 text-center text-lg font-bold ">MySql</p>
           </div>
-          <div className="bg-icon flex justify-center flex-col pt-3 pl-3 pb-2 pr-3 rounded-md">
+          <div className=" flex justify-center flex-col rounded-md">
             <div className="m-auto px-4 ">
               <Mongo />
             </div>
-            <p className="mt-3 text-center text-sm font-bold ">MongoDB</p>
+            <p className="py-3 text-center text-lg font-bold ">MongoDB</p>
           </div>
-          <div className="bg-icon flex justify-center flex-col pt-3 pl-3 pb-2 pr-3 rounded-md">
-            <div>
-              <div className="m-auto px-4 ">
-                <Spring />
-              </div>
-              <p className="mt-3 text-center text-sm font-bold ">Spring</p>
+          <div className=" flex justify-center flex-col rounded-md">
+            <div className="m-auto px-4 ">
+              <Spring />
             </div>
+            <p className="py-3 text-center text-lg font-bold ">Spring</p>
           </div>
-          <div className="bg-icon flex justify-center flex-col pt-3 pl-3 pb-2 pr-3 rounded-md">
-            <div>
-              <div className="m-auto px-4 ">
-                <Js />
-              </div>
-              <p className="mt-3 text-center text-sm font-bold ">JavaScript</p>
+          <div className=" flex justify-center flex-col rounded-md">
+            <div className="m-auto px-4 ">
+              <Js />
             </div>
+            <p className="py-3 text-center text-lg font-bold ">JavaScript</p>
           </div>
         </ul>
       </div>
