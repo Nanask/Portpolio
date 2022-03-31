@@ -28,32 +28,8 @@ export const modalStore = create((set) => ({
   // },
 }));
 
-// export const imgStore = create((set) => ({
-//   // state
-//   img: {dog, cat1, cat2, cat3},
-
-//   handleImg() {
-//     set((state) => ({
-//       img: !state.img,
-//     }));
-//   },
-// }));
-
 export const Modal = () => {
   const { flagModal, handleModal } = modalStore();
-
-  // const onLeftClick = () => {
-  //   // const length = image.length;
-  //   // console.log("length", length);
-  //   // const _img = image.map((item) => {
-  //   //   console.log("img", item[0]);
-  //   // });
-  //   alert("left");
-  // };
-
-  // const onRightClick = () => {
-  //   alert("right");
-  // };
 
   return (
     <div>
@@ -64,9 +40,9 @@ export const Modal = () => {
               <X_Icon />
             </div>
             <Slider />
-            <div className="py-20  font-bold">
+            <div className="py-14 font-bold">
               <h1 className="text-3xl text-center mb-5 font-regular">portfolio 내용작성</h1>
-              <p>
+              <p className="text-center">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus, voluptate dolore et exercitationem consequuntur est voluptatibus quo suscipit cupiditate ducimus explicabo animi fuga
                 consequatur praesentium nulla, incidunt tempore a iure!
               </p>

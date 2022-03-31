@@ -9,6 +9,12 @@ module.exports = {
       special: ["LeferiPoint-SpecialA"],
     },
     extend: {
+      width: {
+        img: "40rem",
+      },
+      height: {
+        img: "28rem",
+      },
       keyframes: {
         slider: {
           "0%": {

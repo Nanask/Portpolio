@@ -17,6 +17,11 @@ export const Slider = () => {
       img: cat1,
     },
   ]);
+
+  const wh = {
+    width: `100%`,
+    height: `100%`,
+  };
   const [imageIndex, setImageIndex] = useState(0);
   const [style, setStyle] = useState({
     // backgroundImg: `url(${imgSlider.url})`,
@@ -55,10 +60,6 @@ export const Slider = () => {
     },
   ]);
 
-  const EndSlider = () => {
-    let tricEnd = [];
-    return tricEnd.push(imgSlider[imgSlider.length]);
-  };
   // const imgSlider = [
   //   {
   //     id: 1,
@@ -99,36 +100,15 @@ export const Slider = () => {
       });
 
       //index값이 이미지 개수와 일치하면
-
-      // if (imageIndex >= lastImg) {
-      //   setImgSlider([...imgSlider, ..._imgSlider]);
-      //   setStyle({
-      //     transform: `translateX(-${imageIndex + 1}00%)`,
-      //     transition: `all 0.4s ease-in-out`,
-      //   });
-
-      // setImageIndex(0);
-
-      // setTimeout(() => {
-      //   setStyle({
-      //     transform: `translateX(-${0}00%)`,
-      //     transition: `0ms`,
-      //   });
-      // }, 500);
     }
     if (imageIndex >= lastImg) {
       console.log("마지막 이미지일때 imageIndex", imageIndex);
-      // setImgSlider([...imgSlider, ..._imgSlider]);\
-      // let index = 0;
-      setImgSlider([...imgSlider, { EndSlider }]);
+      setImgSlider([...imgSlider, ..._imgSlider]);
 
       // if (imgSlider.length + 1) {
       //   console.log("imageIndex === imgSlider.length", imageIndex, imgSlider.length);
       // }
       setImageIndex(0);
-      // index++;
-      // console.log("index", index);
-      // console.log("imageIndex[lastImg]", imageIndex[index]);
 
       setTimeout(() => {
         setStyle({
@@ -136,37 +116,7 @@ export const Slider = () => {
           transition: `0ms`,
         });
       }, 500);
-
-      // if (imageIndex[lastImg]) {
-      //   console.log("imageIndex === lastImg +1", lastImg + 1, imageIndex);
-      // }
-
-      // console.log("img")
-      // if (imgSlider >= _imgSlider) {
-      //   console.log("imgSlider, _imgSlider", imgSlider.length, _imgSlider.length);
-      //   setImageIndex(0);
-      //   setTimeout(() => {
-      //     setStyle({
-      //       transform: `translateX(-${0}00%)`,
-      //       transition: `0ms`,
-      //     });
-      //   }, 500);
-      // }
-
-      // setImgSlider(imgSlider);
     }
-    // if (length - 1 == lastImg) {
-    //   console.log("imageIndex가 3일때", length - 1, lastImg);
-    //   setImgSlider(imgSlider);
-    // setImageIndex(0);
-    // setTimeout(() => {
-    //   setStyle({
-    //     transform: `translateX(-${0}00%)`,
-    //     transition: `0ms`,
-    //   });
-    // }, 500);
-    // }
-    // alert("right");
   };
 
   const onLeftClick = () => {
@@ -186,15 +136,15 @@ export const Slider = () => {
       setImageIndex(lastImg);
       console.log("imageIndex가 마지막값일때", imageIndex);
       _imgSlider.unshift(_imgSlider[lastImg]);
-      // const prevImages = imgSlider;
-      // console.log(prevImages);
+      const prevImages = imgSlider;
+      console.log(prevImages);
 
-      // setImgSlider([
-      //   ...imgSlider,
-      //   ...prevImages.filter((img, index) => {
-      //     return index !== length;
-      //   }),
-      // ]);
+      setImgSlider([
+        ...imgSlider,
+        ...prevImages.filter((img, index) => {
+          return index !== length;
+        }),
+      ]);
 
       setStyle({
         transform: `translateX(-${imageIndex}00%)`,
@@ -239,26 +189,20 @@ export const Slider = () => {
 
   //
   return (
-    // <div className="w-4/5 h-auto">
-    <div className="pt-10 px-10 flex justify-between items-center whitespace-nowrap">
-      <div className=" z-50 hover: cursor-pointer" onClick={onLeftClick}>
+    <div className="py-5 px-10 flex justify-center items-center whitespace-nowrap ">
+      <div className="z-50 pr-3 hover: cursor-pointer" onClick={onLeftClick}>
         <FontAwesomeIcon icon={faAngleLeft} size="3x" />
       </div>
-      <div className="w-96 h-96 relative overflow-hidden">
-        <div className="pt-10 flex absolute object-cover max-h-full" style={style}>
+      <div className="w-img h-img relative overflow-hidden flex justify-center items-center ">
+        <div className="flex absolute object-cover h-img w-img items-center" style={style}>
           {imgSlider.map((item, index) => {
-            return <img src={item.img} key={index} />;
+            return <img src={item.img} key={index} height="100%" />;
           })}
         </div>
       </div>
-      <div className="z-50 hover: cursor-pointer" onClick={onRightClick}>
+      <div className="z-50 pl-3 hover: cursor-pointer" onClick={onRightClick}>
         <FontAwesomeIcon icon={faAngleRight} size="3x" />
       </div>
-      {/* <div className="pt-10 flex justify-center" style={style}>
-    //   <img src={cat1} width="500px" height="300px" />
-    //   <img src={cat2} width="500px" height="300px" />
-    //   <img src={cat3} width="500px" height="300px" />
-    // </div> */}
     </div>
   );
 };
