@@ -1,5 +1,5 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useRef, useState } from "react";
 import create from "zustand";
 import { X_Icon } from "../icon/X_Icon";
 import { faAngleLeft } from "@fortawesome/free-solid-svg-icons";
@@ -30,12 +30,27 @@ export const modalStore = create((set) => ({
 
 export const Modal = () => {
   const { flagModal, handleModal } = modalStore();
+  const closed = useRef();
+
+  const closeModal = (e) => {
+    const target = closed.current;
+    if (target) {
+      handleModal(false);
+    }
+    console.log("target인것", target);
+  };
 
   return (
     <div>
       {flagModal ? (
-        <div className="w-full h-screen z-50 fixed flex justify-center items-center left-0 top-0 bg-opacity-70 bg-black overflow-hidden ">
-          <div className="bg-white flex justify-center flex-col  rounded md:w-1/2 h-5/6 border-2 ">
+        <div onClick={handleModal} className=" w-full h-screen z-50 fixed flex justify-center items-center left-0 top-0 bg-opacity-70 bg-black overflow-hidden ">
+          <div
+            onClick={(e) => {
+              // 버블링 막기
+              e.stopPropagation();
+            }}
+            className="bg-white flex justify-center flex-col  rounded md:w-1/2 h-5/6 border-2 "
+          >
             <div className="ml-auto mb-auto hover: cursor-pointer font-bold" onClick={handleModal}>
               <X_Icon />
             </div>

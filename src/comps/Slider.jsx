@@ -24,8 +24,6 @@ export const Slider = () => {
   };
   const [imageIndex, setImageIndex] = useState(0);
   const [style, setStyle] = useState({
-    // backgroundImg: `url(${imgSlider.url})`,
-    // display:`none`,
     transform: `translateX(${imageIndex}00%)`,
     transition: `all 0.4s ease-in-out`,
   });
@@ -122,7 +120,6 @@ export const Slider = () => {
   const onLeftClick = () => {
     const lastImg = imgSlider.length - 1;
     const length = imgSlider.length;
-    //
     if (imageIndex !== 0) {
       setImageIndex(imageIndex - 1);
 
@@ -135,9 +132,15 @@ export const Slider = () => {
       console.log("imageIndex 0일때", imageIndex);
       setImageIndex(lastImg);
       console.log("imageIndex가 마지막값일때", imageIndex);
-      _imgSlider.unshift(_imgSlider[lastImg]);
+      const lmglast = _imgSlider.unshift(_imgSlider[lastImg]);
       const prevImages = imgSlider;
       console.log(prevImages);
+
+      // setImgSlider([
+      //   ...imgSlider,
+      //   ...prevImages.filter((img, index) => {
+      //     return index !== length;
+      //   }),
 
       setImgSlider([
         ...imgSlider,
@@ -187,13 +190,12 @@ export const Slider = () => {
   //   });
   // }, [imgSlider]);
 
-  //
   return (
     <div className="py-5 px-10 flex justify-center items-center whitespace-nowrap ">
       <div className="z-50 pr-3 hover: cursor-pointer" onClick={onLeftClick}>
         <FontAwesomeIcon icon={faAngleLeft} size="3x" />
       </div>
-      <div className="w-img h-img relative overflow-hidden flex justify-center items-center ">
+      <div className=" w-img h-img relative overflow-hidden flex justify-center items-center">
         <div className="flex absolute object-cover h-img w-img items-center" style={style}>
           {imgSlider.map((item, index) => {
             return <img src={item.img} key={index} height="100%" />;
