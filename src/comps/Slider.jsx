@@ -136,12 +136,6 @@ export const Slider = () => {
       const prevImages = imgSlider;
       console.log(prevImages);
 
-      // setImgSlider([
-      //   ...imgSlider,
-      //   ...prevImages.filter((img, index) => {
-      //     return index !== length;
-      //   }),
-
       setImgSlider([
         ...imgSlider,
         ...prevImages.filter((img, index) => {
@@ -150,7 +144,7 @@ export const Slider = () => {
       ]);
 
       setStyle({
-        transform: `translateX(-${imageIndex}00%)`,
+        transform: `translateX(-${lastImg}00%)`,
         transition: `0ms`,
       });
       setImgSlider(imgSlider);
@@ -195,7 +189,7 @@ export const Slider = () => {
       <div className="z-50 pr-3 hover: cursor-pointer" onClick={onLeftClick}>
         <FontAwesomeIcon icon={faAngleLeft} size="3x" />
       </div>
-      <div className=" w-img h-img relative overflow-hidden flex justify-center items-center">
+      <div className="w-img h-img relative overflow-hidden flex justify-center items-center">
         <div className="flex absolute object-cover h-img w-img items-center" style={style}>
           {imgSlider.map((item, index) => {
             return <img src={item.img} key={index} height="100%" />;

@@ -1,13 +1,6 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import React, { useContext, useEffect, useRef, useState } from "react";
+import React from "react";
 import create from "zustand";
 import { X_Icon } from "../icon/X_Icon";
-import { faAngleLeft } from "@fortawesome/free-solid-svg-icons";
-import { faAngleRight } from "@fortawesome/free-solid-svg-icons";
-import cat1 from "../img/cat1.jpg";
-import cat2 from "../img/cat2.jpg";
-import cat3 from "../img/cat3.jpg";
-import dog from "../img/dog.png";
 import { Slider } from "./Slider";
 
 export const modalStore = create((set) => ({
@@ -30,15 +23,6 @@ export const modalStore = create((set) => ({
 
 export const Modal = () => {
   const { flagModal, handleModal } = modalStore();
-  const closed = useRef();
-
-  const closeModal = (e) => {
-    const target = closed.current;
-    if (target) {
-      handleModal(false);
-    }
-    console.log("target인것", target);
-  };
 
   return (
     <div>
@@ -46,7 +30,6 @@ export const Modal = () => {
         <div onClick={handleModal} className=" w-full h-screen z-50 fixed flex justify-center items-center left-0 top-0 bg-opacity-70 bg-black overflow-hidden ">
           <div
             onClick={(e) => {
-              // 버블링 막기
               e.stopPropagation();
             }}
             className="bg-white flex justify-center flex-col  rounded md:w-1/2 h-5/6 border-2 "

@@ -13,11 +13,23 @@
 }
 
 /* .App-header::after {
-  background-image: url("../img/backImg.svg");
+  background-image: url("../img/header.png");
+  background-position: center;
   background-size: cover;
+  background: 100% 300px repeat-x;
   z-index: -1;
-  opacity: 0.9;
+  opacity: 1;
   inset: 0;
   position: absolute;
   content: "";
+  animation: movebg 2s linear infinite;
+}
+
+@keyframes movebg {
+  0% {
+    background-position: 0 center;
+  }
+  100% {
+    background-position: -300px center;
+  }
 } */

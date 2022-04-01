@@ -28,12 +28,13 @@ function Headers() {
   };
 
   return (
-    <section className="bg-cover font-header relative regular ">
+    <section className="bg-cover font-black relative ">
       <div className="App-header">
+        <div className="text-center items-center max-w-md max-h-screen">
+          <img src={require("../img/icon.png").default} />
+        </div>
         <header className="">
-          <div className="text-5xl ">
-            <TypingStep sequence={sequence} element="h1" typeSpeed="150" cursorColor="white" blinkingSpeed="600" />
-          </div>
+          <div className="text-5xl ">{/* <TypingStep sequence={sequence} element="h1" typeSpeed="150" cursorColor="white" blinkingSpeed="600" /> */}</div>
         </header>
         <div className="pt-24">
           <div className="p-10 align-bottom">
