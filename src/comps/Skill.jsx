@@ -4,12 +4,12 @@ import { SkillContainer } from "./SkillContainer";
 
 function Skill() {
   return (
-    <section className="pt-30 font-regular " data-aos="fade-up">
+    <section className="pt-30 font-regular " data-aos="fade-up" data-aos-offset="100" data-aos-duration="500">
       <div className="py-7 text-center">
-        <h1 className="text-3xl font-bold">SKILLS</h1>
+        <h1 className="text-3xl font-bold font-cafe">SKILLS</h1>
       </div>
-      <div className="py-7 container m-auto" data-aos="fade-up" data-aos-easing="linear">
-        <ul className="flex justify-center space-x-10 items-center md: flex-wrap">
+      <div className="py-7 container m-auto flex justify-center" data-aos="fade-up" data-aos-easing="linear" data-aos-offset="100" data-aos-duration="500">
+        <ul className="flex justify-center  items-center lg:w-full md: flex-wrap md: w-img">
           <SkillContainer />
         </ul>
       </div>

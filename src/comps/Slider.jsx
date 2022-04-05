@@ -186,7 +186,7 @@ export const Slider = () => {
 
   return (
     <div className="py-5 px-10 flex justify-center items-center whitespace-nowrap ">
-      <div className="z-50 pr-3 hover: cursor-pointer" onClick={onLeftClick}>
+      <div className="pr-3 hover: cursor-pointer" onClick={onLeftClick}>
         <FontAwesomeIcon icon={faAngleLeft} size="3x" />
       </div>
       <div className="w-img h-img relative overflow-hidden flex justify-center items-center">
@@ -196,7 +196,7 @@ export const Slider = () => {
           })}
         </div>
       </div>
-      <div className="z-50 pl-3 hover: cursor-pointer" onClick={onRightClick}>
+      <div className="pl-3 hover: cursor-pointer" onClick={onRightClick}>
         <FontAwesomeIcon icon={faAngleRight} size="3x" />
       </div>
     </div>

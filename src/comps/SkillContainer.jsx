@@ -10,19 +10,29 @@ import { Spring } from "../icon/Spring";
 export const SkillContainer = () => {
   const skillItems = [
     {
-      id: 0,
-      icon: <Css3 />,
-      tag: "CSS 3",
-    },
-    {
       id: 1,
       icon: <Html />,
-      tag: "HTML 5",
+      tag: "HTML5",
+    },
+    {
+      id: 0,
+      icon: <Css3 />,
+      tag: "CSS3",
+    },
+    {
+      id: 6,
+      icon: <Js />,
+      tag: "JavaScript",
     },
     {
       id: 2,
       icon: <ReactIcon />,
       tag: "React",
+    },
+    {
+      id: 5,
+      icon: <Spring />,
+      tag: "Spring",
     },
     {
       id: 3,
@@ -34,26 +44,14 @@ export const SkillContainer = () => {
       icon: <Mongo />,
       tag: "MongoDB",
     },
-    {
-      id: 5,
-      icon: <Spring />,
-      tag: "Spring",
-    },
-    {
-      id: 6,
-      icon: <Js />,
-      tag: "JavaScript",
-    },
   ];
 
   const skillList = skillItems.map((itme, index) => {
     return (
-      //   <ul className="flex justify-center space-x-10 items-center flex-wrap" key={itme.id}>
-      <li className="flex justify-center flex-col ">
+      <li className="flex justify-center flex-col px-5 pb-5  ">
         <div className="m-auto px-4">{itme.icon}</div>
-        <p className="py-3 text-center text-lg font-bold">{itme.tag}</p>
+        <p className="py-3 text-center text-lg font-bold font-cafeAir">{itme.tag}</p>
       </li>
-      //   </ul>
     );
   });
 

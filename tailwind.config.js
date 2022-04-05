@@ -4,9 +4,8 @@ module.exports = {
   theme: {
     fontFamily: {
       black: ["LeferiPoint-BlackA"],
-      bold: ["LeferiBaseType-BoldA"],
-      regular: ["LeferiBaseType-RegularA"],
-      special: ["LeferiPoint-SpecialA"],
+      cafe: ["Cafe24Ssurround"],
+      cafeAir: ["Cafe24SsurroundAir"],
     },
     extend: {
       width: {
