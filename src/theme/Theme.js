@@ -1,11 +1,25 @@
 export const dark = {
-  bgColor: "#282c34",
-  color: "white",
+  // 짝수
+  even: {
+    bgColor: "#7f7f7f",
+    textColor: "#282c34",
+  },
+  // 홀수
+  odd: {
+    bgColor: "#494949",
+    textColor: "black",
+  },
 };
 
 export const light = {
-  bgColor: "white",
-  color: "#282c34",
+  even: {
+    bgColor: "white",
+    textColor: "#282c34",
+  },
+  odd: {
+    bgColor: "#e9d5a1",
+    textColor: "white",
+  },
 };
 
 export const theme = {

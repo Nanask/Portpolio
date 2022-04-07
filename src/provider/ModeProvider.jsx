@@ -10,7 +10,7 @@ export const useThemecontext = () => {
 
 const ModeProvider = ({ children }) => {
   const [theme, setTheme] = useState("light");
-  const themeObject = theme === "light" ? dark : light;
+  const themeObject = theme === "light" ? light : dark;
 
   const toggleTheme = useCallback(() => {
     if (theme === "light") {
@@ -28,6 +28,7 @@ const ModeProvider = ({ children }) => {
   const propsStore = {
     toggleTheme,
     themeObject,
+    theme,
   };
 
   return (

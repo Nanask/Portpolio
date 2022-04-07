@@ -6,8 +6,8 @@ export const Footer = () => {
   const gitHover = () => {};
 
   return (
-    <section className="bg-icon p-8 ">
-      <div className="text-center ">
+    <section className=" p-8 footer">
+      <div className="text-center head_line">
         <h1 className="text-3xl font-cafe font-bold pb-5">Contact</h1>
       </div>
       <div className="flex justify-center items-center font-cafeAir font-bold space-x-10">

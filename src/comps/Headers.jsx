@@ -7,6 +7,7 @@ import { TextTyping } from "./TextTyping";
 import { Typing, TypingStep } from "typing-effect-reactjs";
 import Typewriter from "typewriter-effect";
 import background from "../img/backImg.png";
+import { MainIcon } from "./../icon/MainIcon";
 
 function Headers() {
   const { toggleTheme, themeObject } = useThemecontext();
@@ -28,10 +29,11 @@ function Headers() {
   };
 
   return (
-    <section className="bg-cover font-cafeAir font-bold relative ">
-      <div className="App-header">
-        <div className="text-center items-center max-w-md max-h-screen">
-          <img src={require("../img/icon.png").default} />
+    <section className="bg-cover header font-cafeAir font-bold relative ">
+      <div className="App-header ">
+        <div className="text-center m-auto items-center max-w-md max-h-screen">
+          {/* <img src={require("../img/icon.png").default} /> */}
+          <MainIcon />
         </div>
         <header className="">
           <div className="text-5xl ">

@@ -9,6 +9,7 @@ import { Modal, modalStore } from "./comps/Modal";
 import { Footer } from "./comps/Footer";
 import AOS from "aos";
 import { useEffect } from "react";
+import { theme } from "./theme/Theme";
 
 function App() {
   useEffect(() => {
@@ -17,20 +18,17 @@ function App() {
     });
   });
 
-  const { flagModal, handleModal } = modalStore();
-
   return (
-    <div>
-      <ModeProvider>
-        <Modal />
-        {/* //<Globalstyle />  */}
-        <Headers />
-        <Intro />
-        <Project />
-        <Skill />
-        <Footer />
-      </ModeProvider>
-    </div>
+    <ModeProvider>
+      <Globalstyle />
+      <Modal />
+      <Headers />
+      <Intro />
+      <Project />
+      <Skill />
+      <Footer />
+      {/* </Globalstyle> */}
+    </ModeProvider>
   );
 }
 

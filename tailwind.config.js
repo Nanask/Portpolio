@@ -50,6 +50,7 @@ module.exports = {
       },
       boxShadow: {
         "3xl": "0 0 20px 0 rgba(0,0,0,.35)",
+        "4xl": "0 25px 50px 0px rgba(0,0,0,.35) ",
       },
     },
     variants: {

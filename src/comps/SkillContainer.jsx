@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Css3 } from "../icon/Css3";
 import { Html } from "../icon/Html";
 import { Js } from "../icon/Js";
@@ -6,12 +6,27 @@ import { Mongo } from "../icon/Mongo";
 import { Mysql } from "../icon/Mysql";
 import { ReactIcon } from "../icon/ReactIcon";
 import { Spring } from "../icon/Spring";
+import { useThemecontext } from "./../provider/ModeProvider";
 
 export const SkillContainer = () => {
+  const { theme } = useThemecontext();
+  const [color, setColor] = useState("black");
+
+  useEffect(() => {
+    return theme === "light" ? color : setColor("white");
+  }, [color]);
+  const iconColor = () => {
+    return theme === "light" ? color : setColor("white");
+  };
+
+  console.log("theme", theme);
+
+  console.log("iconColor", color);
+
   const skillItems = [
     {
       id: 1,
-      icon: <Html />,
+      icon: <Html color={iconColor} />,
       tag: "HTML5",
     },
     {
