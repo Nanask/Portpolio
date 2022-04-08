@@ -32,14 +32,14 @@ export const Modal = () => {
             onClick={(e) => {
               e.stopPropagation();
             }}
-            className="bg-white flex justify-center flex-col  rounded md:w-1/2 h-5/6 border-2 "
+            className="bg-white flex justify-center flex-col  rounded md:w-1/2 h-5/6 border-2 modal "
           >
-            <div className="ml-auto mb-auto hover: cursor-pointer font-bold" onClick={handleModal}>
+            <div className="ml-auto mb-auto hover: cursor-pointer font-bold icon" onClick={handleModal}>
               <X_Icon />
             </div>
             <Slider />
             <div className="py-14 font-bold">
-              <h1 className="text-3xl text-center mb-5 font-regular">portfolio 내용작성</h1>
+              <h2 className="text-3xl text-center mb-5 font-regular">portfolio 내용작성</h2>
               <p className="text-center">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus, voluptate dolore et exercitationem consequuntur est voluptatibus quo suscipit cupiditate ducimus explicabo animi fuga
                 consequatur praesentium nulla, incidunt tempore a iure!

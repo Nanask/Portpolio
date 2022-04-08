@@ -7,7 +7,7 @@ export const dark = {
   // 홀수
   odd: {
     bgColor: "#494949",
-    textColor: "black",
+    textColor: "white",
   },
 };
 

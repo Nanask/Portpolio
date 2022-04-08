@@ -10,6 +10,8 @@ import { Footer } from "./comps/Footer";
 import AOS from "aos";
 import { useEffect } from "react";
 import { theme } from "./theme/Theme";
+import { Nav } from "./comps/Nav";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 function App() {
   useEffect(() => {
@@ -19,7 +21,12 @@ function App() {
   });
 
   return (
+    // <BrowserRouter>
     <ModeProvider>
+      {/* <Nav /> */}
+      {/* <Routes>
+          <Route path="/" element={<Nav />}></Route>
+        </Routes> */}
       <Globalstyle />
       <Modal />
       <Headers />
@@ -29,6 +36,7 @@ function App() {
       <Footer />
       {/* </Globalstyle> */}
     </ModeProvider>
+    // {/* </BrowserRouter> */}
   );
 }
 

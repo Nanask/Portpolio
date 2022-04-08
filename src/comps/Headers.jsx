@@ -31,19 +31,14 @@ function Headers() {
   return (
     <section className="bg-cover header font-cafeAir font-bold relative ">
       <div className="App-header ">
-        <div className="text-center m-auto items-center max-w-md max-h-screen">
-          {/* <img src={require("../img/icon.png").default} /> */}
+        <div className="text-center m-auto items-center max-w-md max-h-screen icon">
           <MainIcon />
         </div>
-        <header className="">
-          <div className="text-5xl ">
-            <TypingStep sequence={sequence} element="h1" typeSpeed="150" cursorColor="white" blinkingSpeed="600" />
-          </div>
-        </header>
-        <div className="pt-24">
-          <div className="p-10 align-bottom">
-            <BasicSwitches />
-          </div>
+        <div className="text-5xl ">
+          <TypingStep sequence={sequence} element="h1" typeSpeed="150" cursorColor="white" blinkingSpeed="600" />
+        </div>
+        <div className="px-10 pb-10 pt-24 align-bottom">
+          <BasicSwitches />
         </div>
       </div>
     </section>

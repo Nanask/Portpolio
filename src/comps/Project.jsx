@@ -12,9 +12,8 @@ function Project() {
   return (
     <section className="project">
       <div className="text-center head_line p-8" data-aos="fade-up" data-aos-offset="200">
-        <div className=" text-center text-3xl font-bold font-cafe head_line">PROJECTS</div>
+        <h1 className=" text-center text-3xl font-bold font-cafe head_line">PROJECTS</h1>
       </div>
-      {/* <div className="pb-24 flex justify-center  space-y-10"> */}
       <div className="pb-20 flex justify-center m-auto md: flex-wrap  container " data-aos="fade-up" data-aos-easing="linear" data-aos-offset="200" data-aos-duration="500">
         <div className="py-6 px-10">
           <div className="text-center shadow-3xl hover:shadow-4xl cursor-pointer duration-200 bg-white inline-block px-3 pt-3 slider">
@@ -35,7 +34,6 @@ function Project() {
           </div>
         </div>
       </div>
-      {/* </div> */}
     </section>
   );
 }

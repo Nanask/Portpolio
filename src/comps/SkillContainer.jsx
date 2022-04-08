@@ -64,8 +64,8 @@ export const SkillContainer = () => {
   const skillList = skillItems.map((itme, index) => {
     return (
       <li className="flex justify-center flex-col px-5 pb-5  ">
-        <div className="m-auto px-4">{itme.icon}</div>
-        <p className="py-3 text-center text-lg font-bold font-cafeAir">{itme.tag}</p>
+        <div className="m-auto px-4 skills">{itme.icon}</div>
+        <p className="py-3 text-center text-lg font-bold font-cafeAir icon_name">{itme.tag}</p>
       </li>
     );
   });
