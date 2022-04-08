@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import create from "zustand";
 import { X_Icon } from "../icon/X_Icon";
 import { Slider } from "./Slider";
@@ -24,17 +24,25 @@ export const modalStore = create((set) => ({
 export const Modal = () => {
   const { flagModal, handleModal } = modalStore();
 
+  useEffect(() => {
+    if (flagModal) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "unset";
+    }
+  });
+
   return (
     <div>
       {flagModal ? (
-        <div onClick={handleModal} className=" w-full h-screen z-50 fixed flex justify-center items-center left-0 top-0 bg-opacity-70 bg-black overflow-hidden ">
+        <div onClick={handleModal} className=" w-full h-screen z-50 fixed flex justify-center items-center left-0 top-0 bg-opacity-70 bg-black overflow-hidden  ">
           <div
             onClick={(e) => {
               e.stopPropagation();
             }}
-            className="bg-white flex justify-center flex-col  rounded md:w-1/2 h-5/6 border-2 modal "
+            className="bg-white flex justify-center flex-col rounded md:w-1/2 h-5/6  border-2 slider "
           >
-            <div className="ml-auto mb-auto hover: cursor-pointer font-bold icon" onClick={handleModal}>
+            <div className="ml-auto pt-10 px-5 hover: cursor-pointer font-bold icon" onClick={handleModal}>
               <X_Icon />
             </div>
             <Slider />

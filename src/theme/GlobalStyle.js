@@ -12,7 +12,7 @@ ${reset}
 .header, .project , .footer, .modal {
   background-color: ${({ theme }) => theme.odd.bgColor};
 }
-.intro, .skill {
+.intro, .skill , #root{
   background-color: ${({ theme }) => theme.even.bgColor};
 }
 

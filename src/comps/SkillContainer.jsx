@@ -9,24 +9,21 @@ import { Spring } from "../icon/Spring";
 import { useThemecontext } from "./../provider/ModeProvider";
 
 export const SkillContainer = () => {
-  const { theme } = useThemecontext();
-  const [color, setColor] = useState("black");
+  // useEffect(() => {
+  //   return theme === "light" ? color : setColor("white");
+  // }, [color]);
+  // const iconColor = () => {
+  //   return theme === "light" ? color : setColor("white");
+  // };
 
-  useEffect(() => {
-    return theme === "light" ? color : setColor("white");
-  }, [color]);
-  const iconColor = () => {
-    return theme === "light" ? color : setColor("white");
-  };
+  // console.log("theme", theme);
 
-  console.log("theme", theme);
-
-  console.log("iconColor", color);
+  // console.log("iconColor", color);
 
   const skillItems = [
     {
       id: 1,
-      icon: <Html color={iconColor} />,
+      icon: <Html />,
       tag: "HTML5",
     },
     {
