@@ -21,22 +21,21 @@ function App() {
   });
 
   return (
-    // <BrowserRouter>
-    <ModeProvider>
-      {/* <Nav /> */}
-      {/* <Routes>
-          <Route path="/" element={<Nav />}></Route>
+    <BrowserRouter>
+      <ModeProvider>
+        {/* <Routes>
+          <Route path="/" element={<Headers />}></Route>
         </Routes> */}
-      <Globalstyle />
-      <Modal />
-      <Headers />
-      <Intro />
-      <Project />
-      <Skill />
-      <Footer />
-      {/* </Globalstyle> */}
-    </ModeProvider>
-    // {/* </BrowserRouter> */}
+        <Globalstyle />
+        <Modal />
+        <Headers />
+        <Intro />
+        <Project />
+        <Skill />
+        <Footer />
+        {/* </Globalstyle> */}
+      </ModeProvider>
+    </BrowserRouter>
   );
 }
 

@@ -16,13 +16,13 @@ export const Footer = () => {
       <div className="space-x-5 text-center flex justify-center pt-7">
         <div className="flex justify-center flex-col">
           {/* <div className="bg-gray-400"> */}
-          <a className="m-auto" href="https://github.com/Nanask" target="_blank">
+          <a className="m-auto icon" href="https://github.com/Nanask" target="_blank">
             <GitHub />
           </a>
           {/* <p className="">Git Hub</p> */}
         </div>
         <div className="flex justify-center flex-col">
-          <a className="m-auto" href="https://velog.io/@nana1005" target="_blank">
+          <a className="m-auto icon" href="https://velog.io/@nana1005" target="_blank">
             <Velog />
           </a>
           {/* <p className="">Velog</p> */}
