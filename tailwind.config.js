@@ -14,6 +14,7 @@ module.exports = {
       height: {
         img: "28rem",
         700: "700px",
+        80: "80%",
       },
       keyframes: {
         slider: {
@@ -48,6 +49,7 @@ module.exports = {
         "bg-icon": "#040203",
         "bg-black": " #1f1f1f",
         "dark-basic": "#efe1bd",
+        "bg-nav": "#282c34",
         icon: "#f8f5f4",
       },
       boxShadow: {

@@ -33,7 +33,7 @@ function Headers() {
     <section className=" min-h-screen bg-cover header font-cafeAir font-bold relative ">
       <div className=" flex flex-col justify-center w-full text-center">
         <Nav />
-        <div className="text-center m-auto items-center max-w-md max-h-screen icon">
+        <div className="text-center m-auto max-w-lg max-h-screen icon">
           <MainIcon />
         </div>
         <div className="text-5xl ">

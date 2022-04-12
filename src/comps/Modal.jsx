@@ -40,9 +40,9 @@ export const Modal = () => {
             onClick={(e) => {
               e.stopPropagation();
             }}
-            className="bg-white flex justify-center flex-col rounded md:w-1/2 h-5/6  border-2 slider "
+            className="bg-white flex justify-center flex-col rounded md:w-1/2 h-5/6 slider "
           >
-            <div className="ml-auto pt-10 px-5 hover: cursor-pointer font-bold icon" onClick={handleModal}>
+            <div className="ml-auto hover: cursor-pointer font-bold icon  md: px-5 py-4" onClick={handleModal}>
               <X_Icon />
             </div>
             <Slider />

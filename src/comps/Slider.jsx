@@ -4,6 +4,9 @@ import React, { useEffect, useState } from "react";
 import cat1 from "../img/cat1.jpg";
 import cat2 from "../img/cat2.jpg";
 import cat3 from "../img/cat3.jpg";
+import pf_1 from "../img/portfolio/pf_1.png";
+import pf_2 from "../img/portfolio/pf_2.png";
+import pf_3 from "../img/portfolio/pf_3.png";
 
 export const Slider = () => {
   const [img, setImg] = useState([
@@ -57,6 +60,8 @@ export const Slider = () => {
       img: cat3,
     },
   ]);
+
+  console.log("img", imgSlider);
 
   // const imgSlider = [
   //   {
@@ -185,14 +190,14 @@ export const Slider = () => {
   // }, [imgSlider]);
 
   return (
-    <div className="py-5 px-10 flex justify-center items-center whitespace-nowrap ">
+    <div className="py-5 px-10 flex justify-center items-center  ">
       <div className="pr-3 hover: cursor-pointer icon" onClick={onLeftClick}>
         <FontAwesomeIcon icon={faAngleLeft} size="3x" />
       </div>
-      <div className="w-img h-img relative overflow-hidden flex justify-center items-center">
-        <div className="flex absolute object-cover h-img w-img items-center" style={style}>
+      <div className="w-img h-img relative overflow-hidden flex justify-center items-center ">
+        <div className="flex bg-cover max-w-full max-h-full items-center" style={style}>
           {imgSlider.map((item, index) => {
-            return <img src={item.img} key={index} height="100%" />;
+            return <img src={item.img} key={index} height="100%" width="100%" />;
           })}
         </div>
       </div>

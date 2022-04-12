@@ -32,8 +32,8 @@ export const Nav = () => {
 
   const navList = navItem.map((item) => {
     return (
-      <li className="space-x-2 hover:bg-yellow-200 p-3 rounded-md cursor-pointer important tw-text-black">
-        <NavLink className={({ isActive }) => (isActive ? "p-3 border-2 border-yellow-200 border-solid rounded-md" : "")} to={item.link}>
+      <li className="p-3 space-x-3 hover: cursor-pointer text-black">
+        <NavLink className={({ isActive }) => (isActive ? "p-3 bg-bg-nav rounded-md text-gray-50 transition-all" : "")} to={item.link}>
           {item.title}
         </NavLink>
       </li>
@@ -42,7 +42,7 @@ export const Nav = () => {
 
   return (
     <section className="bg-black">
-      <ul className="flex space-x-4 pl-3 py-4 text-lg justify-end bg-white border-bg-basic ">{navList}</ul>
+      <ul className="flex space-x-5 p-4 text-lg justify-end bg-white ">{navList}</ul>
     </section>
   );
 };
