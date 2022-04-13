@@ -7,87 +7,39 @@ import cat3 from "../img/cat3.jpg";
 import pf_1 from "../img/portfolio/pf_1.png";
 import pf_2 from "../img/portfolio/pf_2.png";
 import pf_3 from "../img/portfolio/pf_3.png";
+import { ProjectImages } from "./ProjectImages";
+import portfolio from "../img/portfolio/portfolio.png";
+import sport from "../img/sport/sport.png";
+import todo from "../img/todo/todo.png";
+import are from "../img/are/are.png";
+import { modalStore, projectImg } from "./Modal";
+import { styled } from "@mui/material/styles";
+import { ListItem } from "@mui/material";
 
 export const Slider = () => {
-  const [img, setImg] = useState([
-    {
-      img: cat2,
-    },
-    {
-      img: cat3,
-    },
-    {
-      img: cat1,
-    },
-  ]);
-
-  const wh = {
-    width: `100%`,
-    height: `100%`,
-  };
+  const { img } = projectImg();
+  const { handleModal } = modalStore();
   const [imageIndex, setImageIndex] = useState(0);
   const [style, setStyle] = useState({
     transform: `translateX(${imageIndex}00%)`,
     transition: `all 0.4s ease-in-out`,
   });
 
-  const _imgSlider = [
-    {
-      id: 1,
-      img: cat1,
-    },
-    {
-      id: 2,
-      img: cat2,
-    },
-    {
-      id: 3,
-      img: cat3,
-    },
-  ];
+  console.log("img", img);
 
-  const [imgSlider, setImgSlider] = useState([
-    {
-      id: 1,
-      img: cat1,
-    },
-    {
-      id: 2,
-      img: cat2,
-    },
-    {
-      id: 3,
-      img: cat3,
-    },
-  ]);
+  const image = img.filter((item, e, index) => {
+    // console.log("dataset", e.target.dataset);
+    console.log("item.id", item.id);
+    console.log("dddd");
+  });
 
-  console.log("img", imgSlider);
-
-  // const imgSlider = [
-  //   {
-  //     id: 1,
-  //     url: "../Img/cat1.jpg",
-  //   },
-  //   {
-  //     id: 2,
-  //     url: "../Img/cat2.jpg",
-  //   },
-  //   {
-  //     id: 3,
-  //     url: "../Img/cat3.jpg",
-  //   },
-  // ];
-
-  // useEffect(() => {
-  //   const tricImg = imgSlider.filter((item, index) => {
-  //     return index == item.length - 1;
-  //   });
-  //   console.log("tricImg", tricImg);
-  // });
-
+  // handleModal = (e, id) => {
+  //   // const id = e.target.dataset;
+  //   console.log("id", id);
+  // };
   const onRightClick = () => {
-    const length = imgSlider.length;
-    const lastImg = imgSlider.length - 1;
+    const length = img.length;
+    const lastImg = img.length - 1;
 
     //
     // index값이 이미지 개수랑 일치하지 않는다면
@@ -104,105 +56,48 @@ export const Slider = () => {
 
       //index값이 이미지 개수와 일치하면
     }
-    if (imageIndex >= lastImg) {
-      console.log("마지막 이미지일때 imageIndex", imageIndex);
-      setImgSlider([...imgSlider, ..._imgSlider]);
+    // if (imageIndex >= lastImg) {
+    //   console.log("마지막 이미지일때 imageIndex", imageIndex);
+    //   setImg([...img]);
 
-      // if (imgSlider.length + 1) {
-      //   console.log("imageIndex === imgSlider.length", imageIndex, imgSlider.length);
-      // }
-      setImageIndex(0);
+    //   // if (imgSlider.length + 1) {
+    //   //   console.log("imageIndex === imgSlider.length", imageIndex, imgSlider.length);
+    //   // }
+    //   setImageIndex(0);
 
-      setTimeout(() => {
-        setStyle({
-          transform: `translateX(-${0}00%)`,
-          transition: `0ms`,
-        });
-      }, 500);
-    }
-  };
-
-  const onLeftClick = () => {
-    const lastImg = imgSlider.length - 1;
-    const length = imgSlider.length;
-    if (imageIndex !== 0) {
-      setImageIndex(imageIndex - 1);
-
-      setStyle({
-        transform: `translateX(-${imageIndex - 1}00%)`,
-        transition: `all 0.4s ease-in-out`,
-      });
-    }
-    if (imageIndex === 0) {
-      console.log("imageIndex 0일때", imageIndex);
-      setImageIndex(lastImg);
-      console.log("imageIndex가 마지막값일때", imageIndex);
-      const lmglast = _imgSlider.unshift(_imgSlider[lastImg]);
-      const prevImages = imgSlider;
-      console.log(prevImages);
-
-      setImgSlider([
-        ...imgSlider,
-        ...prevImages.filter((img, index) => {
-          return index !== length;
-        }),
-      ]);
-
-      setStyle({
-        transform: `translateX(-${lastImg}00%)`,
-        transition: `0ms`,
-      });
-      setImgSlider(imgSlider);
-    }
-
-    // if (imageIndex === 0) {
-    //   setImageIndex(length - 1);
+    //   setTimeout(() => {
+    //     setStyle({
+    //       transform: `translateX(-${0}00%)`,
+    //       transition: `0ms`,
+    //     });
+    //   }, 500);
     // }
   };
 
-  // useEffect(() => {
-  //   if (imageIndex === 0) {
-  //     setImageIndex(imgSlider.length);
-  //     setTimeout(function () {
-  //       setStyle({
-  //         transform: `translateX(-${imgSlider.length}00%)`,
-  //         transition: `all 0.4s ease-in-out`,
-  //       });
-  //     }, 500);
-  //   }
-  //   if (imgSlider !== _imgSlider) {
-  //     setImageIndex(0);
-  //     console.log("imgIndex", imageIndex);
-  //     setTimeout(() => {
-  //       setStyle({
-  //         transform: `translateX(-${0}00%)`,
-  //         transition: `0ms`,
-  //       });
-  //     }, 500);
-  //   }
-  // }, [imageIndex, imgSlider.length]);
-
-  // useEffect(() => {
-  //   setStyle({
-  //     transform: `translateX(-${1}00%)`,
-  //     transition: `0ms`,
-  //   });
-  // }, [imgSlider]);
+  // handleModal = (e) => {
+  //   // const data = e.target.getAttribute("data-id");
+  //   // console.log(data);
+  //   console.log("ddd");
+  // };
 
   return (
     <div className="py-5 px-10 flex justify-center items-center  ">
-      <div className="pr-3 hover: cursor-pointer icon" onClick={onLeftClick}>
+      <div className="pr-3 hover: cursor-pointer icon">
         <FontAwesomeIcon icon={faAngleLeft} size="3x" />
       </div>
       <div className="w-img h-img relative overflow-hidden flex justify-center items-center ">
         <div className="flex bg-cover max-w-full max-h-full items-center" style={style}>
-          {imgSlider.map((item, index) => {
+          {img.map((item, index) => {
+            // console.log("target", e.target.dataset);
+            console.log("index", index);
             return <img src={item.img} key={index} height="100%" width="100%" />;
           })}
+          {/* {image} */}
+          {/* <ProjectImages /> */}
         </div>
       </div>
-      <div className="pl-3 hover: cursor-pointer icon" onClick={onRightClick}>
-        <FontAwesomeIcon icon={faAngleRight} size="3x" />
+      <div className="pl-3 hover: cursor-pointer icon">
+        <FontAwesomeIcon icon={faAngleRight} size="3x" onClick={onRightClick} />
       </div>
     </div>
   );

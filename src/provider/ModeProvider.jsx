@@ -25,7 +25,7 @@ const ModeProvider = ({ children }) => {
         setTheme("light");
       }
     }
-    console.log("theme", theme);
+    // console.log("theme", theme);
   });
 
   const themeObject = theme === "light" ? light : dark;

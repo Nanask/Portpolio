@@ -2,13 +2,23 @@ import React, { useEffect, useState } from "react";
 import create from "zustand";
 import { X_Icon } from "../icon/X_Icon";
 import { Slider } from "./Slider";
-
+import portfolio from "../img/portfolio/portfolio.png";
+import sport from "../img/sport/sport.png";
+import todo from "../img/todo/todo.png";
+import are from "../img/are/are.png";
 export const modalStore = create((set) => ({
   // state
   flagModal: false,
   // inputValue: "",
 
-  handleModal() {
+  handleModal(e) {
+    // const { img } = projectImg();
+    const id = e.target.dataset;
+    console.log("e.target", id);
+    // if (id === img) {
+    //   console.log("img", img);
+    // }
+    // console.log("img", img);
     set((state) => ({
       flagModal: !state.flagModal,
     }));
@@ -21,8 +31,57 @@ export const modalStore = create((set) => ({
   // },
 }));
 
+export const projectImg = create((set) => ({
+  img:
+    ([
+      {
+        img: todo,
+      },
+      {
+        img: todo,
+      },
+      {
+        img: todo,
+      },
+    ],
+    [
+      {
+        img: are,
+      },
+      {
+        img: are,
+      },
+      {
+        img: are,
+      },
+    ],
+    [
+      {
+        img: sport,
+      },
+      {
+        img: sport,
+      },
+      {
+        img: sport,
+      },
+    ],
+    [
+      {
+        img: portfolio,
+      },
+      {
+        img: portfolio,
+      },
+      {
+        img: portfolio,
+      },
+    ]),
+}));
+
 export const Modal = () => {
   const { flagModal, handleModal } = modalStore();
+  const { img } = projectImg();
 
   useEffect(() => {
     if (flagModal) {
@@ -35,9 +94,10 @@ export const Modal = () => {
   return (
     <div>
       {flagModal ? (
-        <div onClick={handleModal} className=" w-full h-screen z-50 fixed flex justify-center items-center left-0 top-0 bg-opacity-70 bg-black overflow-hidden  ">
+        <div onClick={(e) => handleModal()} className=" w-full h-screen z-50 fixed flex justify-center items-center left-0 top-0 bg-opacity-70 bg-black overflow-hidden  ">
           <div
             onClick={(e) => {
+              console.log("실행");
               e.stopPropagation();
             }}
             className="bg-white flex justify-center flex-col rounded md:w-1/2 h-5/6 slider "

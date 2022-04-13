@@ -36,9 +36,7 @@ function Headers() {
         <div className="text-center m-auto max-w-lg max-h-screen icon">
           <MainIcon />
         </div>
-        <div className="text-5xl ">
-          <TypingStep sequence={sequence} element="h1" typeSpeed="150" cursorColor="white" blinkingSpeed="600" />
-        </div>
+        <div className="text-5xl ">{/* <TypingStep sequence={sequence} element="h1" typeSpeed="150" cursorColor="white" blinkingSpeed="600" /> */}</div>
         <div className="px-10 pb-10 pt-24 align-bottom">
           <BasicSwitches />
         </div>

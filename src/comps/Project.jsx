@@ -20,25 +20,25 @@ function Project() {
       <div className="flex pb-20 justify-center m-auto lg:flex-nowrap md: flex-wrap container " data-aos="fade-up" data-aos-easing="linear" data-aos-offset="200" data-aos-duration="500">
         <div className="px-5 py-5">
           <div className="rounded-md text-center shadow-3xl hover:shadow-4xl hover:scale-105 transform-gpu cursor-pointer duration-300 px-3 pt-3 slider">
-            <img onClick={handleModal} src={todo} width="100%" height="100%" />
+            <img data-id="0" onClick={() => handleModal("0")} src={todo} width="100%" height="100%" />
             <p className="py-3 text-xl">To Do List</p>
           </div>
         </div>
         <div className="px-5 py-5">
           <div className="rounded-md text-center shadow-3xl hover:shadow-4xl hover:scale-105 transform-gpu cursor-pointer duration-300 px-3 pt-3 slider">
-            <img onClick={handleModal} src={are} width="100%" height="100%" />
+            <img data-id="1" onClick={handleModal} src={are} width="100%" height="100%" />
             <p className="py-3 text-xl">A_Re</p>
           </div>
         </div>
         <div className="px-5 py-5">
           <div className="rounded-md text-center shadow-3xl hover:shadow-4xl hover:scale-105 transform-gpu cursor-pointer duration-300 px-3 pt-3 slider">
-            <img onClick={handleModal} src={sport} width="100%" height="100%" />
+            <img data-id="2" onClick={handleModal} src={sport} width="100%" height="100%" />
             <p className="py-3 text-xl">Sport</p>
           </div>
         </div>
         <div className="px-5 py-5">
           <div className="rounded-md text-center shadow-3xl hover:shadow-4xl hover:scale-105 transform-gpu cursor-pointer duration-300 px-3 pt-3 slider">
-            <img onClick={handleModal} src={portfolio} width="100%" height="100%" />
+            <img data-id="3" onClick={handleModal} src={portfolio} width="100%" height="100%" />
             <p className="py-3 text-xl">Portfolio</p>
           </div>
         </div>
