@@ -20,7 +20,7 @@ function Project() {
       <div className="flex pb-20 justify-center m-auto lg:flex-nowrap md: flex-wrap container " data-aos="fade-up" data-aos-easing="linear" data-aos-offset="200" data-aos-duration="500">
         <div className="px-5 py-5">
           <div className="rounded-md text-center shadow-3xl hover:shadow-4xl hover:scale-105 transform-gpu cursor-pointer duration-300 px-3 pt-3 slider">
-            <img data-id="0" onClick={() => handleModal("0")} src={todo} width="100%" height="100%" />
+            <img data-id="0" onClick={handleModal} src={todo} width="100%" height="100%" />
             <p className="py-3 text-xl">To Do List</p>
           </div>
         </div>

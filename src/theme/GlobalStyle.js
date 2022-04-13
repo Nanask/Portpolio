@@ -20,7 +20,6 @@ ${reset}
   background-color: ${(props) => (props.theme === light ? "white" : "#7f7f7f")};
 }
 
-
 p, h1, h2, .icon , .skills {
   color: ${(props) => (props.theme === light ? "black" : "white")};
 `;

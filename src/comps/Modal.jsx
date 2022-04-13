@@ -9,6 +9,7 @@ import are from "../img/are/are.png";
 export const modalStore = create((set) => ({
   // state
   flagModal: false,
+  imageId: null,
   // inputValue: "",
 
   handleModal(e) {
@@ -21,6 +22,7 @@ export const modalStore = create((set) => ({
     // console.log("img", img);
     set((state) => ({
       flagModal: !state.flagModal,
+      imageId: id,
     }));
   },
 
@@ -32,56 +34,17 @@ export const modalStore = create((set) => ({
 }));
 
 export const projectImg = create((set) => ({
-  img:
-    ([
-      {
-        img: todo,
-      },
-      {
-        img: todo,
-      },
-      {
-        img: todo,
-      },
-    ],
-    [
-      {
-        img: are,
-      },
-      {
-        img: are,
-      },
-      {
-        img: are,
-      },
-    ],
-    [
-      {
-        img: sport,
-      },
-      {
-        img: sport,
-      },
-      {
-        img: sport,
-      },
-    ],
-    [
-      {
-        img: portfolio,
-      },
-      {
-        img: portfolio,
-      },
-      {
-        img: portfolio,
-      },
-    ]),
+  img: [
+    [todo, todo, todo],
+    [are, are, are],
+    [sport, sport, sport],
+    [portfolio, portfolio, portfolio],
+  ],
 }));
 
 export const Modal = () => {
   const { flagModal, handleModal } = modalStore();
-  const { img } = projectImg();
+  // const { img } = projectImg();
 
   useEffect(() => {
     if (flagModal) {
@@ -94,13 +57,12 @@ export const Modal = () => {
   return (
     <div>
       {flagModal ? (
-        <div onClick={(e) => handleModal()} className=" w-full h-screen z-50 fixed flex justify-center items-center left-0 top-0 bg-opacity-70 bg-black overflow-hidden  ">
+        <div onClick={handleModal} className="w-full h-screen z-50 fixed flex justify-center items-center left-0 top-0 bg-opacity-70 bg-black overflow-hidden">
           <div
             onClick={(e) => {
-              console.log("실행");
               e.stopPropagation();
             }}
-            className="bg-white flex justify-center flex-col rounded md:w-1/2 h-5/6 slider "
+            className="bg-white flex justify-center flex-col rounded md:w-1/2 h-5/6 slider"
           >
             <div className="ml-auto hover: cursor-pointer font-bold icon  md: px-5 py-4" onClick={handleModal}>
               <X_Icon />
