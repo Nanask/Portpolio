@@ -52,7 +52,7 @@ export const Slider = () => {
   };
 
   return (
-    <div className="py-5 px-10 flex justify-center items-center  ">
+    <div className="py-5 px-10 flex justify-center items-center transtion">
       <div className="pr-3 hover: cursor-pointer icon">
         <FontAwesomeIcon icon={faAngleLeft} size="3x" />
       </div>
