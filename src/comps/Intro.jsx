@@ -1,13 +1,12 @@
 import "aos/dist/aos.css";
 import React from "react";
 import "../css/intro.css";
-import { Calendar } from "../icon/Calendar";
-import { GitHub } from "../icon/GitHub";
-import { Human } from "../icon/Human";
-import { Velog } from "../icon/Velog";
-import { SkillContainer } from "./SkillContainer";
 
-function Intro() {
+export const Intro = () => {
+  // React.forwardRef((props, ref) => {
+  //   console.log("ref", ref);
+  // });
+  // console.log("props", props.ref);
   return (
     <section className="intro" data-aos="fade-up intro">
       <div className="py-10  text-center font-black head_line">
@@ -23,6 +22,4 @@ function Intro() {
       </div>
     </section>
   );
-}
-
-export default Intro;
+};
