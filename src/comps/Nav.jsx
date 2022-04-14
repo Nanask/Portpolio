@@ -1,3 +1,4 @@
+import convertLayerAtRulesToControlComments from "@tailwindcss/postcss7-compat/lib/lib/convertLayerAtRulesToControlComments";
 import React, { forwardRef, useEffect, useRef, useState } from "react";
 import { NavLink } from "react-router-dom";
 
@@ -10,33 +11,33 @@ export const Nav = () => {
 
   const navItem = [
     {
-      id: 0,
+      id: ".header",
       title: "Home",
       link: "/",
     },
     {
-      id: 1,
+      id: ".intro",
       title: "About",
       link: "/about",
     },
     {
-      id: 2,
+      id: ".project",
       title: "Project",
       link: "/project",
     },
     {
-      id: 3,
+      id: ".skill",
       title: "Skill",
       link: "/skill",
     },
     {
-      id: 4,
+      id: ".footer",
       title: "Content",
       link: "/content",
     },
   ];
-  const homeRef = useRef(null);
-  const introRef = useRef(null);
+  // const homeRef = useRef(null);
+  // const introRef = useRef(null);
 
   const component = (e) => {
     const id = e.target.dataset.id;
@@ -47,12 +48,14 @@ export const Nav = () => {
     // console.log("intro", intro);
     const introScroll = intro.getBoundingClientRect().top;
     // console.log("introScroll", introScroll);
-
-    if (id === "3") {
-      const scrollTo = document.querySelector(id);
-      console.log("여기는 1번");
-      id.current.scrollIntoView();
-    }
+    const scrollView = document.querySelector(id);
+    console.log("scrollView", scrollView);
+    scrollView.scrollIntoView({ behavior: "smooth", top: introScroll });
+    // setStyle();
+    // if (id === "3") {
+    // console.log("여기는 1번");
+    // id.current.scrollIntoView();
+    // }
   };
 
   // scroll에 따른 네비게이션 색변화하기
@@ -61,9 +64,9 @@ export const Nav = () => {
     const navbarHeight = navbar.getBoundingClientRect().height;
     window.addEventListener("scroll", () => setScrollY(window.scrollY));
     if (scrollY > navbarHeight) {
-      navbar.classList.add("navbar_scroll");
+      navbar.classList.add("bg-red-500");
     } else {
-      navbar.classList.remove("navbar_scroll");
+      navbar.classList.remove("bg-red-500");
     }
   };
   useEffect(() => {
