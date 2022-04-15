@@ -16,21 +16,11 @@ export const modalStore = create((set) => ({
     // const { img } = projectImg();
     const id = e.target.dataset;
     console.log("e.target", id);
-    // if (id === img) {
-    //   console.log("img", img);
-    // }
-    // console.log("img", img);
     set((state) => ({
       flagModal: !state.flagModal,
       imageId: id,
     }));
   },
-
-  // onChange(e) {
-  //   set(() => ({
-  //     inputValue: e.target.value,
-  //   }));
-  // },
 }));
 
 export const projectImg = create((set) => ({
@@ -44,6 +34,9 @@ export const projectImg = create((set) => ({
 
 export const Modal = () => {
   const { flagModal, handleModal } = modalStore();
+
+  const setModal = modalStore((state) => !state.flagModal);
+  console.log("setModal", setModal);
   // const { img } = projectImg();
 
   useEffect(() => {
@@ -54,17 +47,31 @@ export const Modal = () => {
     }
   });
 
+  // 클래스네임중에서 특정 이름이 포함된 클래스가 있으면 modal을 닫아라!
+  const outSlidermodal = (e) => {
+    const { className } = e.target;
+    const xIcon = e.target.className.baseVal;
+    console.log("xIcon", xIcon);
+    // const modal = className.includes("modal_box");
+    // console.log("modal", modal);
+    // if (modal || xIcon) {
+    console.log("className", className);
+    // modalStore.setState({ flagModal: false });
+    // handleModal();
+    // }
+  };
+
   return (
     <div>
       {flagModal ? (
-        <div onClick={handleModal} className="w-full h-screen z-50 fixed flex justify-center items-center left-0 top-0 bg-opacity-70 bg-black overflow-hidden">
+        <div className="w-full h-screen z-50 fixed flex justify-center items-center left-0 top-0 bg-opacity-70 bg-black overflow-hidden modal_box">
           <div
-            onClick={(e) => {
-              e.stopPropagation();
-            }}
+            // onClick={(e) => {
+            //   e.stopPropagation();
+            // }}
             className="bg-white flex justify-center flex-col rounded md:w-1/2 h-5/6 slider"
           >
-            <div className="ml-auto hover: cursor-pointer font-bold icon  md: px-5 py-4" onClick={handleModal}>
+            <div className="ml-auto hover: cursor-pointer font-bold icon  md: px-5 py-4 modal_box" onClick={handleModal}>
               <X_Icon />
             </div>
             <Slider />

@@ -20,6 +20,12 @@ ${reset}
   background-color: ${(props) => (props.theme === light ? "white" : "#7f7f7f")};
 }
 
+.navbar_scroll {
+  background-color: ${(props) => (props.theme === light ? "white" : "#232323")};
+  transition: all 300ms ease-in-out;
+  opacity : 0.9;
+}
+
 
 .nav_bar {
   color: ${(props) => (props.theme === light ? "black" : "white")};
@@ -31,9 +37,3 @@ p, h1, h2, .icon , .skills, .nav_li {
 
 // background-color: ${(props) => (props.theme === light ? "white" : "black")}
 //   background-color: white;
-
-// .navbar_scroll {
-//   background-color: ${(props) => (props.theme === light ? "white" : "black")};
-//   transition: all 300ms ease-in-out;
-//   opacity : 0.9;
-// }
