@@ -12,7 +12,7 @@ export const Slider = () => {
     transition: `all 0.4s ease-in-out`,
   });
 
-  console.log("imageId", imageId);
+  // console.log("imageId", imageId);
 
   const onRightClick = () => {
     const length = img.length;
@@ -51,20 +51,24 @@ export const Slider = () => {
     // }
   };
 
+  // const imageStore = img[imageId.id].map((item, index) => {
+  //   return <img src={item} key={index} height="100%" width="100%" />;
+  // });
+
   return (
-    <div className="py-5 px-10 flex justify-center items-center transtion">
-      <div className="pr-3 hover: cursor-pointer icon">
+    <div className=" flex justify-center items-center">
+      <div className="pr-5 hover: cursor-pointer icon">
         <FontAwesomeIcon icon={faAngleLeft} size="3x" />
       </div>
       <div className="w-img h-img relative overflow-hidden flex justify-center items-center ">
-        <div className="flex bg-cover max-w-full max-h-full items-center" style={style}>
+        <div className="flex bg-cover items-center " style={style}>
           {img[imageId.id].map((img, index) => {
-            console.log("index", index);
-            return <img src={img} key={index} height="100%" width="100%" />;
+            console.log("imageId 클릭", imageId.id);
+            return <img className="border-2 border-gray-600 border-solid p-3" src={img} key={index} height="100%" width="100%" />;
           })}
         </div>
       </div>
-      <div className="pl-3 hover: cursor-pointer icon">
+      <div className="pl-5 hover: cursor-pointer icon">
         <FontAwesomeIcon icon={faAngleRight} size="3x" onClick={onRightClick} />
       </div>
     </div>

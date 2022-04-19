@@ -4,7 +4,7 @@ import { SkillContainer } from "./SkillContainer";
 
 function Skill() {
   return (
-    <section className="skill pt-30 font-regular " data-aos="fade-up" data-aos-offset="100" data-aos-duration="500">
+    <section className="skill pt-30 font-regular " data-aos="fade-up" data-aos-offset="200" data-aos-duration="500">
       <div className=" py-7 text-center head_line">
         <h1 className="text-3xl font-bold font-cafe">SKILLS</h1>
       </div>

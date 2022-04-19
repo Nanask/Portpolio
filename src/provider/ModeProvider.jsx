@@ -1,4 +1,4 @@
-import React, { useEffect, useCallback, useContext, useState, createContext } from "react";
+import React, { useEffect, useCallback, useContext, useState, createContext, useLayoutEffect } from "react";
 import { light, dark } from "../theme/Theme";
 import { ThemeProvider } from "styled-components";
 
@@ -15,9 +15,10 @@ const ModeProvider = ({ children }) => {
     theme === "light" ? window.localStorage.setItem("theme", "light") : window.localStorage.setItem("theme", "dark");
   };
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     setMode();
     const localTheme = window.localStorage.getItem("theme");
+    console.log("localTheme", localTheme);
     if (localTheme !== null) {
       if (localTheme === "dark") {
         setTheme("dark");

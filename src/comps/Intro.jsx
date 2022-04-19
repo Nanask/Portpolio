@@ -3,10 +3,6 @@ import React from "react";
 import "../css/intro.css";
 
 export const Intro = () => {
-  // React.forwardRef((props, ref) => {
-  //   console.log("ref", ref);
-  // });
-  // console.log("props", props.ref);
   return (
     <section className="intro" data-aos="fade-up intro">
       <div className="py-10  text-center font-black head_line">

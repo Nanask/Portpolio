@@ -39,28 +39,10 @@ export const Nav = () => {
 
   const component = (e) => {
     const id = e.target.dataset.id;
-    // console.log("id", id);
-    // const header = document.querySelector(".header");
-    const intro = document.querySelector(".intro");
-    // console.log("header", header);
-    // console.log("intro", intro);
     const navbar = document.querySelector(".nav_bar");
     const navbarHeight = navbar.getBoundingClientRect().height;
-    const introScroll = intro.getBoundingClientRect().top;
-    console.log("introScroll", introScroll);
-    // const scrollView = document.querySelector(id);
     const scrollView = document.querySelector(id).offsetTop - navbarHeight;
-    console.log("scrollView", scrollView);
-    // const scrolledY = window.scrollY;
-    // const position = scrolledY - navbarHeight;
-    // scrollView.scrollIntoView({ behavior: "smooth", block: "center" });
-    // scrollView.scrollIntoView({ behavior: "smooth" }, true);
-    // scrollView.scrollIntoView(true);
-    // if (scrolledY) {
-    // window.scrollTo({ top: position, behavior: "smooth" });
     window.scrollTo({ top: scrollView, behavior: "smooth" });
-    // }
-    // scrollView.scrollTo({ top: introScroll - navbarHeight });
   };
 
   // scroll에 따른 네비게이션 색변화하기
@@ -70,29 +52,11 @@ export const Nav = () => {
     window.addEventListener("scroll", () => setScrollY(window.scrollY));
     if (scrollY > navbarHeight) {
       navbar.classList.add("navbar_scroll");
-      // tailwind로 클래스 이름 넣기
-      // navbar.classList.add("bg-red-500")
     } else {
       navbar.classList.remove("navbar_scroll");
-      // navbar.classList.remove("bg-red-500")
     }
   };
 
-  // useEffect(() => {
-  //   arrowButton();
-  // });
-
-  const arrowButton = () => {
-    const root = document.querySelector("#root");
-    console.log("root", root);
-    const arrowBtn = document.createElement("div");
-    console.log("arrowBtn", arrowBtn);
-    // return (
-    //   <div className="bg-red-600">
-    //     <div>버튼</div>
-    //   </div>
-    // );
-  };
   useEffect(() => {
     (() => {
       window.addEventListener("scroll", () => setScrollY(window.scrollY));
@@ -107,10 +71,8 @@ export const Nav = () => {
     return (
       <li className="p-3 space-x-3 text-black nav_li">
         <NavLink
-          // key={item.id}
           data-id={item.id}
           onClick={component}
-          // ref={homeRef}
           style={style}
           className={({ isActive }) => (isActive ? "p-3 hover: cursor-pointer bg-bg-nav rounded-md text-gray-50 transition-all" : "")}
           to={item.link}

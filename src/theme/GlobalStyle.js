@@ -26,7 +26,6 @@ ${reset}
   opacity : 0.9;
 }
 
-
 .nav_bar {
   color: ${(props) => (props.theme === light ? "black" : "white")};
 }
@@ -37,3 +36,8 @@ p, h1, h2, .icon , .skills, .nav_li {
 
 // background-color: ${(props) => (props.theme === light ? "white" : "black")}
 //   background-color: white;
+// p-3 hover: cursor-pointer bg-bg-nav rounded-md text-gray-50 transition-all
+// // .nav-link {
+//   padding : 0.75rem;
+//   background-color : #232323;
+// }
