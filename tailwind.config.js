@@ -1,3 +1,5 @@
+const { height } = require("@mui/system");
+
 module.exports = {
   content: [],
   purge: ["./src/**/*.{js,jsx,ts,tsx}", "./public/index.html"],
@@ -9,7 +11,11 @@ module.exports = {
     },
     extend: {
       width: {
-        img: "40rem",
+        img: "50rem",
+        400: "400px",
+      },
+      maxHeight: {
+        128: "32rem",
       },
       height: {
         img: "28rem",

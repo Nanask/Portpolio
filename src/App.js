@@ -1,5 +1,5 @@
 import AOS from "aos";
-import { useEffect, useRef } from "react";
+import { useEffect } from "react";
 import { BrowserRouter } from "react-router-dom";
 import "./App.css";
 import { Footer } from "./comps/Footer";
@@ -18,8 +18,6 @@ function App() {
     });
   });
 
-  const introRef = useRef();
-
   return (
     <BrowserRouter>
       <ModeProvider>
@@ -30,7 +28,6 @@ function App() {
         <Project />
         <Skill />
         <Footer />
-        {/* </Globalstyle> */}
       </ModeProvider>
     </BrowserRouter>
   );

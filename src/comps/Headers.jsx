@@ -1,18 +1,10 @@
-import React, { useEffect } from "react";
-import "../css/headers.css";
-import { useThemecontext } from "../provider/ModeProvider";
+import React from "react";
+import { TypingStep } from "typing-effect-reactjs";
+import { MainImage } from "./../icon/MainImage";
 import BasicSwitches from "./BasicSwitches";
-import { styled } from "@mui/material/styles";
-import { TextTyping } from "./TextTyping";
-import { Typing, TypingStep } from "typing-effect-reactjs";
-import Typewriter from "typewriter-effect";
-import background from "../img/backImg.png";
-import { MainIcon } from "./../icon/MainIcon";
 import { Nav } from "./Nav";
 
 function Headers() {
-  const { toggleTheme, themeObject } = useThemecontext();
-
   const sequence = [
     {
       content: "안녕하세요 \n \n프론트엔드 개발자 나나입니다.",
@@ -25,19 +17,18 @@ function Headers() {
     },
   ];
 
-  const style = {
-    position: `fixed`,
-  };
+  const HUMAN_TYPING_SPEED = 150;
+  const BLINKIN_SPEED = 600;
 
   return (
     <section className=" min-h-screen flex bg-cover header font-cafeAir font-bold relative  ">
       <div className=" flex flex-col justify-center w-full text-center ">
         <Nav />
         <div className="text-center m-auto max-w-lg max-h-screen icon">
-          <MainIcon />
+          <MainImage />
         </div>
         <div className="text-5xl ">
-          <TypingStep sequence={sequence} element="h1" typeSpeed="150" cursorColor="white" blinkingSpeed="600" style={style} />
+          <TypingStep sequence={sequence} element="h1" typeSpeed={HUMAN_TYPING_SPEED} cursorColor="white" blinkingSpeed={BLINKIN_SPEED} />
         </div>
         <div className="px-10 pt-24 pb-10  align-bottom">
           <BasicSwitches />

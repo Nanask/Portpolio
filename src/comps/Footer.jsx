@@ -1,10 +1,8 @@
 import React from "react";
-import { GitHub } from "../icon/GitHub";
-import { Velog } from "./../icon/Velog";
+import { gitHubIcon } from "../icon/iconList";
+import { velogIcon } from "../icon/iconList";
 
 export const Footer = () => {
-  const gitHover = () => {};
-
   return (
     <section className=" p-8 footer">
       <div className="text-center head_line">
@@ -15,17 +13,14 @@ export const Footer = () => {
       </div>
       <div className="space-x-5 text-center flex justify-center pt-7">
         <div className="flex justify-center flex-col">
-          {/* <div className="bg-gray-400"> */}
-          <a className="m-auto icon hover:scale-125 transform-gpu duration-200" href="https://github.com/Nanask" target="_blank">
-            <GitHub />
+          <a className="m-auto icon hover:scale-125 transform-gpu duration-200" href="https://github.com/Nanask" target="blank">
+            {gitHubIcon.icon()}
           </a>
-          {/* <p className="">Git Hub</p> */}
         </div>
         <div className="flex justify-center flex-col">
-          <a className="m-auto icon hover:scale-125 transform-gpu duration-200" href="https://velog.io/@nana1005" target="_blank">
-            <Velog />
+          <a className="m-auto icon hover:scale-125 transform-gpu duration-200" href="https://velog.io/@nana1005" target="blank">
+            {velogIcon.icon()}
           </a>
-          {/* <p className="">Velog</p> */}
         </div>
       </div>
     </section>

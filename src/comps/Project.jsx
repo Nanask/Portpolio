@@ -1,47 +1,55 @@
 import "aos/dist/aos.css";
 import React from "react";
-import "../css/project.css";
 import { modalStore } from "./Modal";
 import portfolio from "../img/portfolio/portfolio.png";
-import sport from "../img/sport/sport.png";
+import day from "../img/3days/day.png";
 import todo from "../img/todo/todo.png";
 import are from "../img/are/are.png";
-
-// alt + shift + o  import 지우는것 대박;
 
 function Project() {
   const { handleModal } = modalStore();
 
+  const projectStore = [
+    {
+      id: 0,
+      image: todo,
+      title: "To Do List",
+    },
+    {
+      id: 1,
+      image: are,
+      title: "A_Re",
+    },
+    {
+      id: 2,
+      image: day,
+      title: "작심3일",
+    },
+    {
+      id: 3,
+      image: portfolio,
+      title: "Portfolio",
+    },
+  ];
+
+  const project = projectStore.map((item) => {
+    return (
+      <div className="px-5 py-5 " key={item.id}>
+        <div className="w-96 h-full rounded-md text-center shadow-3xl hover:shadow-4xl hover:scale-105 transform-gpu cursor-pointer duration-300 slider">
+          <img data-id={item.id} onClick={handleModal} alt="project" src={item.image} width="100%" height="100%" />
+          <p className="py-3 text-xl font-cafeAir font-bold">{item.title}</p>
+        </div>
+      </div>
+    );
+  });
+
   return (
     <section className="project">
-      <div className="text-center head_line p-8" data-aos="fade-up" data-aos-offset="200">
+      <div className="text-center head_line p-14" data-aos="fade-up" data-aos-offset="200">
         <h1 className=" text-center text-3xl font-bold font-cafe head_line">PROJECTS</h1>
       </div>
-      <div className="flex pb-20 justify-center m-auto lg:flex-nowrap md: flex-wrap container " data-aos="fade-up" data-aos-easing="linear" data-aos-offset="200" data-aos-duration="500">
-        <div className="px-5 py-5">
-          <div className="rounded-md text-center shadow-3xl hover:shadow-4xl hover:scale-105 transform-gpu cursor-pointer duration-300 px-3 pt-3 slider">
-            <img data-id="0" onClick={handleModal} src={todo} width="100%" height="100%" />
-            <p className="py-3 text-xl">To Do List</p>
-          </div>
-        </div>
-        <div className="px-5 py-5">
-          <div className="rounded-md text-center shadow-3xl hover:shadow-4xl hover:scale-105 transform-gpu cursor-pointer duration-300 px-3 pt-3 slider">
-            <img data-id="1" onClick={handleModal} src={are} width="100%" height="100%" />
-            <p className="py-3 text-xl">A_Re</p>
-          </div>
-        </div>
-        <div className="px-5 py-5">
-          <div className="rounded-md text-center shadow-3xl hover:shadow-4xl hover:scale-105 transform-gpu cursor-pointer duration-300 px-3 pt-3 slider">
-            <img data-id="2" onClick={handleModal} src={sport} width="100%" height="100%" />
-            <p className="py-3 text-xl">Sport</p>
-          </div>
-        </div>
-        <div className="px-5 py-5">
-          <div className="rounded-md text-center shadow-3xl hover:shadow-4xl hover:scale-105 transform-gpu cursor-pointer duration-300 px-3 pt-3 slider">
-            <img data-id="3" onClick={handleModal} src={portfolio} width="100%" height="100%" />
-            <p className="py-3 text-xl">Portfolio</p>
-          </div>
-        </div>
+      <div className="flex pb-20 justify-around m-auto flex-wrap container w-4/6  " data-aos="fade-up" data-aos-easing="linear" data-aos-offset="200" data-aos-duration="500">
+        {project}
       </div>
     </section>
   );
