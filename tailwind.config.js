@@ -13,6 +13,7 @@ module.exports = {
       width: {
         img: "50rem",
         400: "400px",
+        500: "500px",
       },
       maxHeight: {
         128: "32rem",

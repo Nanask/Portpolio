@@ -1,6 +1,6 @@
 import "aos/dist/aos.css";
 import React from "react";
-import dog from "../img/dog.png";
+import poto from "../img/poto.jpg";
 
 //
 export const Intro = () => {
@@ -16,19 +16,17 @@ export const Intro = () => {
         data-aos-offset="200"
         data-aos-duration="500"
       >
-        <div className="max-w-md flex border-2  border-gray-500 border-solid rounded-md shadow-md ">
-          <img className="" src={dog} width="100%" alt="my_poto" height="100%" />
+        <div className="flex border-4 border-gray-300 border-solid  shadow-md w-80 h-72 rounded-full">
+          <img className=" rounded-full w-96 " src={poto} alt="my_poto" />
         </div>
-        <div className="w-400 text-xl flex items-center justify-center">
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        <div className="w-500 text-xl flex items-center justify-center flex-col">
+          <div className="flex flex-col">
+            <p>(주) 한국경영원 인재개발원 수료</p>
+          </div>
+          <div>
             <br />
-            Aliquid adipisci vel quia minima. Dolorum cumque amet laborum autem veritatis expedita totam optio ducimus esse minus,
-            <br /> explicabo at quod quo laboriosam.
-            <br />
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            <br />
-          </p>
+            <p className="font-bold">다양한 프레임워크나 언어들에 대해 관심이 있습니다.</p>
+          </div>
         </div>
       </div>
     </section>
