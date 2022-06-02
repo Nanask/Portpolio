@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/Portpolio/static/css/main.8584a84e.chunk.css",
-    "main.js": "/Portpolio/static/js/main.c894b673.chunk.js",
-    "main.js.map": "/Portpolio/static/js/main.c894b673.chunk.js.map",
+    "main.css": "/Portpolio/static/css/main.d5647dc8.chunk.css",
+    "main.js": "/Portpolio/static/js/main.76417850.chunk.js",
+    "main.js.map": "/Portpolio/static/js/main.76417850.chunk.js.map",
     "runtime-main.js": "/Portpolio/static/js/runtime-main.80aef0af.js",
     "runtime-main.js.map": "/Portpolio/static/js/runtime-main.80aef0af.js.map",
     "static/css/2.cf1ec996.chunk.css": "/Portpolio/static/css/2.cf1ec996.chunk.css",
@@ -12,7 +12,7 @@
     "static/js/3.cba196a3.chunk.js.map": "/Portpolio/static/js/3.cba196a3.chunk.js.map",
     "index.html": "/Portpolio/index.html",
     "static/css/2.cf1ec996.chunk.css.map": "/Portpolio/static/css/2.cf1ec996.chunk.css.map",
-    "static/css/main.8584a84e.chunk.css.map": "/Portpolio/static/css/main.8584a84e.chunk.css.map",
+    "static/css/main.d5647dc8.chunk.css.map": "/Portpolio/static/css/main.d5647dc8.chunk.css.map",
     "static/js/2.1e593e40.chunk.js.LICENSE.txt": "/Portpolio/static/js/2.1e593e40.chunk.js.LICENSE.txt",
     "static/media/are.735e3eb2.png": "/Portpolio/static/media/are.735e3eb2.png",
     "static/media/are1.3504dc89.png": "/Portpolio/static/media/are1.3504dc89.png",
@@ -25,11 +25,11 @@
     "static/media/days1.8689c126.png": "/Portpolio/static/media/days1.8689c126.png",
     "static/media/days2.d565f7e1.png": "/Portpolio/static/media/days2.d565f7e1.png",
     "static/media/days3.477e0960.png": "/Portpolio/static/media/days3.477e0960.png",
-    "static/media/dog.c8226f65.png": "/Portpolio/static/media/dog.c8226f65.png",
     "static/media/pf_1.9a3c9812.png": "/Portpolio/static/media/pf_1.9a3c9812.png",
     "static/media/pf_2.9cca2a93.png": "/Portpolio/static/media/pf_2.9cca2a93.png",
     "static/media/pf_3.05d272fe.png": "/Portpolio/static/media/pf_3.05d272fe.png",
     "static/media/portfolio.8e3e3de5.png": "/Portpolio/static/media/portfolio.8e3e3de5.png",
+    "static/media/poto.4f0a5405.jpg": "/Portpolio/static/media/poto.4f0a5405.jpg",
     "static/media/todo.bcbe337f.png": "/Portpolio/static/media/todo.bcbe337f.png",
     "static/media/todo1.96405934.png": "/Portpolio/static/media/todo1.96405934.png",
     "static/media/todo2.498868db.png": "/Portpolio/static/media/todo2.498868db.png",
@@ -39,7 +39,7 @@
     "static/js/runtime-main.80aef0af.js",
     "static/css/2.cf1ec996.chunk.css",
     "static/js/2.1e593e40.chunk.js",
-    "static/css/main.8584a84e.chunk.css",
-    "static/js/main.c894b673.chunk.js"
+    "static/css/main.d5647dc8.chunk.css",
+    "static/js/main.76417850.chunk.js"
   ]
 }
