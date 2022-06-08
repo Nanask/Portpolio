@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/Portpolio/static/css/main.d5647dc8.chunk.css",
-    "main.js": "/Portpolio/static/js/main.76417850.chunk.js",
-    "main.js.map": "/Portpolio/static/js/main.76417850.chunk.js.map",
+    "main.js": "/Portpolio/static/js/main.2afa14d6.chunk.js",
+    "main.js.map": "/Portpolio/static/js/main.2afa14d6.chunk.js.map",
     "runtime-main.js": "/Portpolio/static/js/runtime-main.80aef0af.js",
     "runtime-main.js.map": "/Portpolio/static/js/runtime-main.80aef0af.js.map",
     "static/css/2.cf1ec996.chunk.css": "/Portpolio/static/css/2.cf1ec996.chunk.css",
@@ -40,6 +40,6 @@
     "static/css/2.cf1ec996.chunk.css",
     "static/js/2.1e593e40.chunk.js",
     "static/css/main.d5647dc8.chunk.css",
-    "static/js/main.76417850.chunk.js"
+    "static/js/main.2afa14d6.chunk.js"
   ]
 }
