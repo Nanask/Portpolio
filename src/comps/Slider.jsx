@@ -26,10 +26,7 @@ export const Slider = () => {
       //index값이 이미지 개수와 일치하면
     }
     if (imageIndex >= lastImg) {
-      console.log("마지막 이미지일때 imageIndex", imageIndex);
       setImageIndex(0);
-      console.log("img", img);
-      console.log("imageIndex 세팅", imageIndex);
 
       setTimeout(() => {
         setStyle({
