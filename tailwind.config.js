@@ -22,6 +22,7 @@ module.exports = {
         img: "28rem",
         700: "700px",
         80: "80%",
+        18: "20rem",
       },
       keyframes: {
         slider: {

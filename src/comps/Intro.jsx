@@ -16,7 +16,7 @@ export const Intro = () => {
         data-aos-offset="200"
         data-aos-duration="500"
       >
-        <div className="flex border-4 border-gray-300 border-solid  shadow-md w-80 h-72 rounded-full">
+        <div className="flex border-4 border-gray-300 border-solid  shadow-md w-80 h-18 rounded-full">
           <img className=" rounded-full w-96 " src={poto} alt="my_poto" />
         </div>
         <div className="w-500 text-xl flex items-center justify-center flex-col">
